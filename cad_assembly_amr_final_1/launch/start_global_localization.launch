@@ -1,0 +1,9 @@
+<launch>
+
+    <!--- Start AMCL Localization -->
+    <include file="$(find cad_assembly_amr_final_1)/launch/start_amcl_localization.launch" />
+
+    <!-- Start EKF Localization -->
+    <include file="$(find cad_assembly_amr_final_1)/launch/start_ekf_localization.launch" />
+
+</launch>

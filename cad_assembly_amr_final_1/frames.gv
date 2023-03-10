@@ -1,0 +1,8 @@
+digraph G {
+"base_link" -> "base_footprint"[label="Broadcaster: /tf_footprint_base\nAverage rate: 26.923 Hz\nMost recent transform: 510.418 ( -0.037 sec old)\nBuffer length: 0.520 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /gazebo\nAverage rate: 22.222 Hz\nMost recent transform: 510.348 ( 0.033 sec old)\nBuffer length: 0.450 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 510.381"[ shape=plaintext ] ;
+ }->"odom";
+}
