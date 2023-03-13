@@ -2,7 +2,7 @@
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
-<robot
+<robot 
   name="cad_assembly_amr_final_1">
 
 
@@ -2135,35 +2135,64 @@
       xyz="0 0 0" />
   </joint>
 
-    <link 
+
+<!--                     LIDAR LINK               -->
+
+
+<link
     name="sensor_laser">
     <inertial>
-      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
-      <mass value="0.1"/>
-      <inertia ixx="0.000145833" ixy = "0" ixz ="0"
+      <origin
+        xyz="0.0 0.0 0.0"
+        rpy="0.0 0.0 0.0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="0.000145833" ixy = "0" ixz ="0"
                iyy="0.000" iyz = "0"
-               izz="0.000208" />
+               izz="0.000208"  />
     </inertial>
     <visual>
-      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
       <geometry>
-        <cylinder radius="0.05" length="0.1"/>
+        <mesh
+          filename="package://cad_assembly_amr_final_1/meshes/R2000.STL" scale="0.001 0.001 0.001" />
       </geometry>
-      <material name="white"/>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
     </visual>
-
     <collision>
-      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57 0 1.57" />
       <geometry>
-        <cylinder radius="0.05" length="0.1"/>
+        <mesh
+          filename="package://cad_assembly_amr_final_1/meshes/R2000.STL"  scale="0.001 0.001 0.001" />
       </geometry>
     </collision>
   </link>
-      
-  <joint name="joint_sensor_laser" type="fixed">
-    <origin xyz="0.18 -0.0325 0.325" rpy="0.0 0.0 0.0"/>
-    <parent link="Link15"/>
-    <child link="sensor_laser"/>
-  </joint>
+  <joint
+    name="joint_sensor_laser"
+    type="fixed">
+    <origin
+      xyz="0.18 -0.0325 0.228"
+      rpy="1.57 0 1.57" />
+    <parent
+      link="Link15" />
+    <child
+      link="sensor_laser" />
+    <axis
+      xyz="0 0 0" />
+  </joint>   
+
+
+    
+<!-- joint_sensor_laser -->
+    <!-- <origin xyz="0.18 -0.0325 0.325" rpy="0.0 0.0 0.0"/> -->
 
 </robot>
