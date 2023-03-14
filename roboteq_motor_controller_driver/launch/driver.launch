@@ -6,7 +6,7 @@
   <param
     name="robot_description"
     textfile="$(find cad_assembly_amr_final_1)/urdf/cad_assembly_amr_final_1.urdf" />
-     <node
+  <node
     name="robot_state_publisher"
     pkg="robot_state_publisher"
     type="robot_state_publisher" />
@@ -15,8 +15,12 @@
     pkg="rviz"
     type="rviz"
     args="-d $(find roboteq_motor_controller_driver)/config/rviz.rviz"/>
-    <!-- arg default="$(find roboteq_motor_controller_driver)/config/rviz.rviz" name="rvizconfig"/> -->
-
+   <node name="odometer" pkg="roboteq_motor_controller_driver" type="odom_pub.py" output="screen">
+    <param name="wheel_radius" value="0.05" />
+    <param name="wheel_base" value="0.3" />
+    <remap from="left_speed" to="/left/hall_speed" />
+    <remap from="right_speed" to="/right/hall_speed" />
+  </node>
 <rosparam command="load" file="$(find roboteq_motor_controller_driver)/config/query.yaml" />
 
 <node name = "roboteq_motor_controller_driver" pkg = "roboteq_motor_controller_driver" type = "roboteq_motor_controller_driver_node" output = "screen">

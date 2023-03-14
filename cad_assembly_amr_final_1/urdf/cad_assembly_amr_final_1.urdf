@@ -2155,7 +2155,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.56 0 0" />
       <geometry>
         <mesh
           filename="package://cad_assembly_amr_final_1/meshes/R2000.STL" scale="0.001 0.001 0.001" />
@@ -2169,7 +2169,7 @@
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="1.57 0 1.57" />
+        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://cad_assembly_amr_final_1/meshes/R2000.STL"  scale="0.001 0.001 0.001" />
@@ -2181,7 +2181,7 @@
     type="fixed">
     <origin
       xyz="0.18 -0.0325 0.228"
-      rpy="1.57 0 1.57" />
+      rpy="0 0 0" />
     <parent
       link="Link15" />
     <child

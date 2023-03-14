@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /RobotModel1
       Splitter Ratio: 0.5
     Tree Height: 551
   - Class: rviz/Selection
@@ -61,17 +62,373 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: ""
+        Link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link10:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link11:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link12:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link13:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link14:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link15:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link16:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link17:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link18:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link19:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link20:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link21:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link22:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link23:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link24:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link25:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link26:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link27:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link28:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link29:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link30:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link31:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link32:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link33:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link34:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link35:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link36:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link9:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        sensor_laser:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        Link1:
+          Value: true
+        Link10:
+          Value: true
+        Link11:
+          Value: true
+        Link12:
+          Value: true
+        Link13:
+          Value: true
+        Link14:
+          Value: true
+        Link15:
+          Value: true
+        Link16:
+          Value: true
+        Link17:
+          Value: true
+        Link18:
+          Value: true
+        Link19:
+          Value: true
+        Link20:
+          Value: true
+        Link21:
+          Value: true
+        Link22:
+          Value: true
+        Link23:
+          Value: true
+        Link24:
+          Value: true
+        Link25:
+          Value: true
+        Link26:
+          Value: true
+        Link27:
+          Value: true
+        Link28:
+          Value: true
+        Link29:
+          Value: true
+        Link3:
+          Value: true
+        Link30:
+          Value: true
+        Link31:
+          Value: true
+        Link32:
+          Value: true
+        Link33:
+          Value: true
+        Link34:
+          Value: true
+        Link35:
+          Value: true
+        Link36:
+          Value: true
+        Link4:
+          Value: true
+        Link5:
+          Value: true
+        Link6:
+          Value: true
+        Link7:
+          Value: true
+        Link9:
+          Value: true
+        base_link:
+          Value: true
+        sensor_laser:
+          Value: true
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        base_link:
+          Link1:
+            {}
+          Link10:
+            {}
+          Link11:
+            {}
+          Link12:
+            {}
+          Link13:
+            {}
+          Link14:
+            {}
+          Link15:
+            sensor_laser:
+              {}
+          Link16:
+            {}
+          Link17:
+            {}
+          Link18:
+            {}
+          Link19:
+            {}
+          Link20:
+            {}
+          Link21:
+            {}
+          Link22:
+            {}
+          Link23:
+            {}
+          Link24:
+            {}
+          Link25:
+            {}
+          Link26:
+            {}
+          Link27:
+            {}
+          Link28:
+            {}
+          Link29:
+            {}
+          Link3:
+            {}
+          Link30:
+            {}
+          Link31:
+            {}
+          Link32:
+            {}
+          Link33:
+            {}
+          Link34:
+            {}
+          Link35:
+            {}
+          Link36:
+            {}
+          Link4:
+            {}
+          Link5:
+            {}
+          Link6:
+            {}
+          Link7:
+            {}
+          Link9:
+            {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: map
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -95,7 +452,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 10
+      Distance: 1.1247421503067017
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -111,9 +468,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.785398006439209
+      Pitch: 0.21039843559265137
       Target Frame: <Fixed Frame>
-      Yaw: 0.785398006439209
+      Yaw: 0.010397681966423988
     Saved: ~
 Window Geometry:
   Displays:
