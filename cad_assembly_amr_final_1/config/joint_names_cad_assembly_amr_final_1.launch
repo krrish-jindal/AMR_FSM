@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find cad_assembly_amr_final_1)/config/joint_names_cad_assembly_amr_final_1.yaml" command="load"/>
+<node args="joint_right_position_controller left_joint_position_controller joint_state_controller " name="controller_spawner" ns="cad_assembly_amr_final_1_controller" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+<node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+  <remap from="/joint_states" to="/joint_states"/>
+</node>
+
+</launch>

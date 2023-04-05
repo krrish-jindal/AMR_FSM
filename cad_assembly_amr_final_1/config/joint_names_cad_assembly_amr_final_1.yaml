@@ -1,1 +1,17 @@
-controller_joint_names: ['', 'left_joint', 'joint_right', 'Joint2', 'Joint8', ]
+# controller_joint_names: ['', 'left_joint', 'joint_right', 'Joint2', 'Joint8', ]
+
+cad_assembly_amr_final_1_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  joint_right_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint_right
+    pid: {p: 21.0, i: 0.01, d: 10.0}
+  left_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: left_joint
+    pid: {p: 21.0, i: 0.01, d: 10.0}

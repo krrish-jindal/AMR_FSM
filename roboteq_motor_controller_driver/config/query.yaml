@@ -24,6 +24,6 @@ queryH:
 # fault_flag2 : ?S  
 # status_flag : ?FS
 # firmware_id : ?FID  
-# encoder_count : ?C
+encoder_count : ?C
 # encoder_speed : ?S  
 

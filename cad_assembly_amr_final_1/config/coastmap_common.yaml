@@ -1,4 +1,4 @@
-ootprint: [[0.35, -0.3], [0.35, 0.3], [-0.35,0.3], [-0.35, -0.3]]
+footprint: [[0.35, -0.3], [0.35, 0.3], [-0.35,0.3], [-0.35, -0.3]]
 footprint_padding: 0.01
 
 robot_base_frame: base_link

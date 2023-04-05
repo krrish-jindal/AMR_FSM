@@ -90,7 +90,7 @@ Odometry_calc::Odometry_calc(){
 	r_wheel_sub = n.subscribe("/hall_count",1000, &Odometry_calc::rightencoderCb, this);
 
 
-  	odom_pub = n.advertise<nav_msgs::Odometry>("odom1", 50);   
+  	odom_pub = n.advertise<nav_msgs::Odometry>("odom", 50);   
   	
 
 
@@ -118,7 +118,7 @@ void Odometry_calc::init_variables()
 
 	ticks_meter = 50;
 
-	base_width = 0.3;
+	base_width = 0.56;
 
 	
 	
@@ -236,7 +236,7 @@ void Odometry_calc::update(){
 		    geometry_msgs::TransformStamped odom_trans;
 		    odom_trans.header.stamp = now;
 		    odom_trans.header.frame_id = "odom";
-		    odom_trans.child_frame_id = "base_footprint";
+		    odom_trans.child_frame_id = "base_link";
 
 		    odom_trans.transform.translation.x = x_final;
 		    odom_trans.transform.translation.y = y_final;
@@ -259,7 +259,7 @@ void Odometry_calc::update(){
 		    odom.pose.pose.orientation = odom_quat;
 
 		    //set the velocity
-		    odom.child_frame_id = "base_footprint";
+		    odom.child_frame_id = "base_link";
 		    odom.twist.twist.linear.x = dx;
 		    odom.twist.twist.linear.y = 0;
 		    odom.twist.twist.angular.z = dr;
