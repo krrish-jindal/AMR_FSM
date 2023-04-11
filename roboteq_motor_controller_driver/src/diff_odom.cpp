@@ -295,7 +295,7 @@ void Odometry_calc::leftencoderCb(const roboteq_motor_controller_driver::channel
 {
 
 // ROS_INFO_STREAM("Left tick" << left_ticks->data);
-	double enc = left_ticks.value[1];
+	double enc = left_ticks.value[0];
 	
 
 
@@ -313,11 +313,11 @@ void Odometry_calc::leftencoderCb(const roboteq_motor_controller_driver::channel
 		lmult = lmult - 1;
 	}
 
-	left = 1.0 * (enc + lmult * (encoder_max - encoder_min ));
+	left =(1.0 * (enc + lmult * (encoder_max - encoder_min )));
 
 	prev_lencoder = enc;
 
-//	ROS_INFO_STREAM("Left " << left);
+	ROS_INFO_STREAM("Left " << left);
 
 }
 
@@ -332,7 +332,7 @@ void Odometry_calc::rightencoderCb(const roboteq_motor_controller_driver::channe
 // ROS_INFO_STREAM("Right tick" << right_ticks->data);
 
 
-	double enc = right_ticks.value[2];
+	double enc = right_ticks.value[1];
 	
 	if((enc < encoder_low_wrap) && (prev_lencoder > encoder_high_wrap))
 	{
@@ -351,6 +351,7 @@ void Odometry_calc::rightencoderCb(const roboteq_motor_controller_driver::channe
 	right = 1.0 * (enc + rmult * (encoder_max - encoder_min ));
 
 	prev_rencoder = enc;
+	ROS_INFO_STREAM("Right " << right);
 
 //	ROS_INFO_STREAM("Right " << right);
 

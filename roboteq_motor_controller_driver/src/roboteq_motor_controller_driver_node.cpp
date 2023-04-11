@@ -98,7 +98,7 @@ private:
 		cmd_sub << "!G 1"
 				<< " " << msg.linear.x << "_"
 				<< "!G 2"
-				<< " " << msg.angular.z << "_";
+				<< " " << -msg.angular.z << "_";
 
 		ser.write(cmd_sub.str());
 		ser.flush();

@@ -13,11 +13,15 @@
   <param
     name="robot_description"
     command="$(find xacro)/xacro $(find cad_assembly_amr_final_1)/urdf/cad_assembly_amr_final_1.xacro"/>   
+  <!-- <arg default="$(find mr_robot_description)/urdf/mr_robot.xacro" name="model"/> -->
+
   <node 
     name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
     <remap from="/joint_states" to="/joint_states" />
     <param name="use_gui" value="TRUE"/>
   </node>
+  <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/> -->
+
 
    <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" -->
     <!-- respawn="false" output="screen"> -->
@@ -30,6 +34,7 @@
     type="rviz"
     args="-d $(find roboteq_motor_controller_driver)/config/rviz.rviz"/>
 <rosparam command="load" file="$(find roboteq_motor_controller_driver)/config/query.yaml" />
+
 
 <node name = "roboteq_motor_controller_driver" pkg = "roboteq_motor_controller_driver" type = "roboteq_motor_controller_driver_node" output = "screen">
   </node>

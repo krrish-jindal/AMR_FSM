@@ -104,7 +104,7 @@
 <!--                        GAZEBO TAG -->
 <gazebo>
   <plugin filename="libgazebo_ros_control.so" name="control"/>
-  <robotNamespace>/cad_assembly_amr_final_1_controller</robotNamespace>
+  <!-- <robotNamespace>/cad_assembly_amr_final_1_controller</robotNamespace> -->
 </gazebo>
 
 <gazebo reference="base_link">
@@ -115,14 +115,14 @@
 </gazebo>
 
 <gazebo reference="right_wheel">
-  <mu1>30000</mu1>
-  <mu2>30000</mu2>
+  <mu1>1000</mu1>
+  <mu2>1000</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="left_wheel">
-  <mu1>30000</mu1>
-  <mu2>30000</mu2>
+  <mu1>1000</mu1>
+  <mu2>1000</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
@@ -135,7 +135,11 @@
 
 
 <!--                     URDF               -->
-
+ <!-- <link name="world"/> -->
+    <!-- <joint name="fixed" type="floating"> -->
+      <!-- <parent link ="world" /> -->
+      <!-- <child link ="base_link" /> -->
+    <!-- </joint> -->
   <link
     name="base_link">
     <inertial>
@@ -222,9 +226,9 @@
     type="continuous">
     <origin
       xyz="-0.0649400472508853 0.249032118798883 0.0781099999999999"
-      rpy="0 0 0" />
+      rpy="0 1.56 0" />
     <parent
-      link="base_link" />
+      link="Link35" />
     <child
       link="left_wheel" />
     <axis
@@ -278,9 +282,9 @@
     type="continuous">
     <origin
       xyz="-0.0649400472508853 -0.311367881201119 0.0780799999999999"
-      rpy="0 0 0" />
+      rpy="0 1.56 0" />
     <parent
-      link="base_link" />
+      link="Link34" />
     <child
       link="right_wheel" />
     <axis
