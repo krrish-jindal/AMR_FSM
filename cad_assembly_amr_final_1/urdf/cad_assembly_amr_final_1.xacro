@@ -234,8 +234,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      effort="5"
-      velocity="315" />
+      effort="30"
+      velocity="5" />
   </joint>
   <link
     name="right_wheel">
@@ -290,8 +290,8 @@
     <axis
       xyz="0 1 0" />
     <limit
-      effort="5"
-      velocity="315" />
+      effort="30"
+      velocity="5" />
   </joint>
   <link
     name="Link1">
