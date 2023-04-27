@@ -21,6 +21,8 @@
     pkg="rviz"
     type="rviz"
     args="-d $(find roboteq_motor_controller_driver)/config/rviz.rviz"/>
+    <!-- args="-d $(find cad_assembly_amr_final_1)/config/navigation.rviz"/> -->
+
 
 
 <!--       Roboteq motor driver      -->

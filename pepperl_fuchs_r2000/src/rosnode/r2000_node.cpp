@@ -39,10 +39,10 @@ R2000Node::R2000Node():nh_("~")
     driver_ = 0;
     // Reading and checking parameters
     //-------------------------------------------------------------------------
-    nh_.param("frame_id", frame_id_, std::string("/scan"));
+    nh_.param("frame_id", frame_id_, std::string("sensor_laser"));
     nh_.param("scanner_ip",scanner_ip_,std::string(""));
-    nh_.param("scan_frequency",scan_frequency_,35);
-    nh_.param("samples_per_scan",samples_per_scan_,3600);
+    nh_.param("scan_frequency",scan_frequency_,10);
+    nh_.param("samples_per_scan",samples_per_scan_,1500);
 
     if( scanner_ip_ == "" )
     {
@@ -55,7 +55,7 @@ R2000Node::R2000Node():nh_("~")
 
     // Declare publisher and create timer
     //-------------------------------------------------------------------------
-    scan_publisher_ = nh_.advertise<sensor_msgs::LaserScan>("scan",100);
+    scan_publisher_ = nh_.advertise<sensor_msgs::LaserScan>("/scan",100);
     cmd_subscriber_ = nh_.subscribe("control_command",100,&R2000Node::cmdMsgCallback,this);
     get_scan_data_timer_ = nh_.createTimer(ros::Duration(1/(2*std::atof(driver_->getParametersCached().at("scan_frequency").c_str()))), &R2000Node::getScanData, this);
 }

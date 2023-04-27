@@ -70,7 +70,7 @@
         </noise>
       </ray>
       <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
-        <topicName>/cad_assembly_amr_final_1/laser/scan</topicName>
+        <topicName>/scan</topicName>
         <frameName>sensor_laser</frameName>
       </plugin>
     </sensor>
@@ -2262,7 +2262,7 @@
     name="joint_sensor_laser"
     type="fixed">
     <origin
-      xyz="0.18 -0.0325 0.228"
+      xyz="0.18 -0.0325 0.308"
       rpy="0 0 0" />
     <parent
       link="Link15" />

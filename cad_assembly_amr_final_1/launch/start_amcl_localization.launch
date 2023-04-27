@@ -1,12 +1,12 @@
 <launch>
 
 <!-- Run the map server -->
-<arg name="map_file" default="$(find cad_assembly_amr_final_1)/maps/my_map.yaml"/>
+<arg name="map_file" default="$(find cad_assembly_amr_final_1)/maps/mymap.yaml"/>
 <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
     
 <node pkg="amcl" type="amcl" name="amcl" output="screen">
 
-  <remap from="scan" to="/cad_assembly_amr_final_1/laser/scan" />
+  <remap from="scan" to="/scan" />
   <remap from="cmd_vel" to="/cad_assembly_amr_final_1/cmd_vel"/>
   <remap from="odom" to="/odometry/filtered" />
 
@@ -36,7 +36,7 @@
   <param name="update_min_d" value="0.2"/>
   <param name="update_min_a" value="0.5"/>
   <param name="odom_frame_id" value="odom"/>
-  <param name="base_frame_id" value="base_footprint"/>
+  <param name="base_frame_id" value="base_link"/>
   <param name="global_frame_id" value="map"/>
   <param name="resample_interval" value="1"/>
   <param name="transform_tolerance" value="0.1"/>
