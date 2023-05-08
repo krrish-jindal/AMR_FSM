@@ -3,7 +3,7 @@
 <launch>
   <!-- Arguments -->
  
-  <arg name="map_file" default="$(find navigation)/maps/mymap.yaml"/>  
+  <arg name="map_file" default="$(find navigation)/maps/fsm_lab.yaml"/>  
   <arg name="move_forward_only" default="true"/>
 
   <!-- Map server -->

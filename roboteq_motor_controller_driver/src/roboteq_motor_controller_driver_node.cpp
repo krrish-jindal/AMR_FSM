@@ -96,9 +96,9 @@ private:
 	{
 		std::stringstream cmd_sub;
 		cmd_sub << "!G 1"
-				<< " " << msg.linear.x*40 << "_"
+				<< " " << msg.linear.x*150 << "_"
 				<< "!G 2"
-				<< " " << -msg.angular.z*25 << "_";
+				<< " " << -msg.angular.z*50 << "_";
 
 		ser.write(cmd_sub.str());
 		ser.flush();
@@ -114,7 +114,7 @@ private:
 	{
 		std::stringstream str;
 		str << "^" << request.userInput << " " << request.channel << " " << request.value << "_ "
-			<< "%\clsav321654987";
+			<< "%lsav321654987";
 		ser.write(str.str());
 		ser.flush();
 		response.result = str.str();

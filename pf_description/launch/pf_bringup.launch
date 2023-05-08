@@ -1,5 +1,5 @@
 <launch>
-    <param name="use_sim_time" value="true" />
+    <!-- <param name="use_sim_time" value="true" /> -->
 
     <node pkg="tf" type="static_transform_publisher" name="world_to_sensor_laser"
     args="0 0 0 0 0 0  world sensor_laser 100" />

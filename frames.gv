@@ -1,0 +1,9 @@
+digraph G {
+"world" -> "sensor_laser"[label=" Broadcaster: /world_to_sensor_laser\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"odom" -> "base_link"[label=" Broadcaster: /diff_odom\nAverage rate: 10.204\nBuffer length: 4.9\nMost recent transform: 1682574316.357\nOldest transform: 1682574311.458\n"];
+"map" -> "odom"[label=" Broadcaster: /slam_gmapping\nAverage rate: 20.202\nBuffer length: 4.95\nMost recent transform: 1682574316.468\nOldest transform: 1682574311.518\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1682574316.430743"[ shape=plaintext ] ;
+}->"map";
+}

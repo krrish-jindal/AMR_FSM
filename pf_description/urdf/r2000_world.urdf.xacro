@@ -11,7 +11,7 @@
     <!-- connect world link to scanner link -->
     <joint name="world_joint" type="fixed">
         <parent link="world" />
-        <child link = "scanner_link" />
+        <child link = "sensor_laser" />
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
     </joint>
 </robot>

@@ -9,6 +9,12 @@ Panels:
         - /RobotModel1
         - /LaserScan1
         - /Map1
+        - /PoseArray1
+        - /Map2
+        - /Map3
+        - /Pose1
+        - /PoseWithCovariance1
+        - /Path1
       Splitter Ratio: 0.5
     Tree Height: 551
   - Class: rviz/Selection
@@ -351,6 +357,8 @@ Visualization Manager:
           Value: true
         left_wheel:
           Value: true
+        map:
+          Value: true
         odom:
           Value: true
         right_wheel:
@@ -364,83 +372,84 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        odom:
-          base_link:
-            Link1:
-              {}
-            Link10:
-              {}
-            Link11:
-              {}
-            Link12:
-              {}
-            Link13:
-              {}
-            Link14:
-              {}
-            Link15:
-              sensor_laser:
+        map:
+          odom:
+            base_link:
+              Link1:
                 {}
-            Link16:
-              {}
-            Link17:
-              {}
-            Link18:
-              {}
-            Link19:
-              {}
-            Link2:
-              {}
-            Link20:
-              {}
-            Link21:
-              {}
-            Link22:
-              {}
-            Link23:
-              {}
-            Link24:
-              {}
-            Link25:
-              {}
-            Link26:
-              {}
-            Link27:
-              {}
-            Link28:
-              {}
-            Link29:
-              {}
-            Link3:
-              {}
-            Link30:
-              {}
-            Link31:
-              {}
-            Link32:
-              {}
-            Link33:
-              {}
-            Link34:
-              right_wheel:
+              Link10:
                 {}
-            Link35:
-              left_wheel:
+              Link11:
                 {}
-            Link36:
-              {}
-            Link4:
-              {}
-            Link5:
-              {}
-            Link6:
-              {}
-            Link7:
-              {}
-            Link8:
-              {}
-            Link9:
-              {}
+              Link12:
+                {}
+              Link13:
+                {}
+              Link14:
+                {}
+              Link15:
+                sensor_laser:
+                  {}
+              Link16:
+                {}
+              Link17:
+                {}
+              Link18:
+                {}
+              Link19:
+                {}
+              Link2:
+                {}
+              Link20:
+                {}
+              Link21:
+                {}
+              Link22:
+                {}
+              Link23:
+                {}
+              Link24:
+                {}
+              Link25:
+                {}
+              Link26:
+                {}
+              Link27:
+                {}
+              Link28:
+                {}
+              Link29:
+                {}
+              Link3:
+                {}
+              Link30:
+                {}
+              Link31:
+                {}
+              Link32:
+                {}
+              Link33:
+                {}
+              Link34:
+                right_wheel:
+                  {}
+              Link35:
+                left_wheel:
+                  {}
+              Link36:
+                {}
+              Link4:
+                {}
+              Link5:
+                {}
+              Link6:
+                {}
+              Link7:
+                {}
+              Link8:
+                {}
+              Link9:
+                {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -464,7 +473,7 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.009999999776482582
+      Size (m): 0.05000000074505806
       Style: Flat Squares
       Topic: /scan
       Unreliable: false
@@ -481,11 +490,135 @@ Visualization Manager:
       Unreliable: false
       Use Timestamp: false
       Value: true
+    - Alpha: 0.800000011920929
+      Arrow Length: 0.30000001192092896
+      Axes Length: 0.30000001192092896
+      Axes Radius: 0.009999999776482582
+      Class: rviz/PoseArray
+      Color: 255; 25; 0
+      Enabled: false
+      Head Length: 0.07000000029802322
+      Head Radius: 0.029999999329447746
+      Name: PoseArray
+      Queue Size: 3
+      Shaft Length: 0.23000000417232513
+      Shaft Radius: 0.009999999776482582
+      Shape: Arrow (Flat)
+      Topic: /particlecloud
+      Unreliable: false
+      Value: false
+    - Alpha: 0.699999988079071
+      Class: rviz/Map
+      Color Scheme: costmap
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic: /move_base/local_costmap/costmap
+      Unreliable: false
+      Use Timestamp: false
+      Value: true
+    - Alpha: 0.699999988079071
+      Class: rviz/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: false
+      Name: Map
+      Topic: /move_base/global_costmap/costmap
+      Unreliable: false
+      Use Timestamp: false
+      Value: false
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Queue Size: 10
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Arrow
+      Topic: /move_base/current_goal
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz/PoseWithCovariance
+      Color: 255; 25; 0
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: true
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: PoseWithCovariance
+      Queue Size: 10
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Arrow
+      Topic: /amcl_pose
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Queue Size: 10
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Arrow
+      Topic: /move_base_simple/goal
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /move_base/NavfnROS/plan
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: odom
+    Fixed Frame: map
     Frame Rate: 30
   Name: root
   Tools:
@@ -509,7 +642,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 7.667689323425293
+      Distance: 7.938445568084717
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -517,17 +650,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.04841111600399017
-        Y: 0.09434352815151215
-        Z: 0.7769901752471924
+        X: 0.7801673412322998
+        Y: 0.04388599470257759
+        Z: 0.5407799482345581
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5697963237762451
+      Pitch: 1.3747965097427368
       Target Frame: <Fixed Frame>
-      Yaw: 4.873561859130859
+      Yaw: 4.658559322357178
     Saved: ~
 Window Geometry:
   Displays:
@@ -546,4 +679,4 @@ Window Geometry:
     collapsed: false
   Width: 1200
   X: 60
-  Y: 32
+  Y: 30
