@@ -10,7 +10,6 @@ Panels:
         - /TF1/Frames1
         - /LaserScan1
         - /LaserScan2
-        - /LaserScan2/Status1
       Splitter Ratio: 0.447686105966568
     Tree Height: 385
   - Class: rviz/Selection
@@ -30,7 +29,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: PointCloud2
+    SyncSource: Image
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -120,7 +119,7 @@ Visualization Manager:
           Value: true
         camera_link:
           Value: true
-        scan:
+        sensor_laser:
           Value: true
       Marker Alpha: 1
       Marker Scale: 0.10000000149011612
@@ -150,7 +149,7 @@ Visualization Manager:
               camera_infra2_frame:
                 camera_infra2_optical_frame:
                   {}
-          scan:
+          sensor_laser:
             {}
       Update Interval: 0
       Value: true
@@ -245,7 +244,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.029999999329447746
       Style: Spheres
-      Topic: /scan
+      Topic: /scan_multi
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
