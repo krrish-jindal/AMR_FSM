@@ -2,9 +2,12 @@
 global_costmap:
   global_frame: map
   robot_base_frame: base_link
+  footprint: [[-0.6,-0.45],[-0.6,0.35],[0.35,0.35],[0.35,-0.45]]
+  footprint_padding: 0.01
+  inflation_radius: 0.23
 
-  update_frequency: 10.0
-  publish_frequency: 10.0
+  update_frequency: 6.0
+  publish_frequency: 7.0
   transform_tolerance: 0.5
 
   static_map: true

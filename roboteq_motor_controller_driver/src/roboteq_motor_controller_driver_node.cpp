@@ -96,9 +96,9 @@ private:
 	{
 		std::stringstream cmd_sub;
 		cmd_sub << "!G 1"
-				<< " " << msg.linear.x*150 << "_"
+				<< " " << msg.linear.x*500 << "_"
 				<< "!G 2"
-				<< " " << -msg.angular.z*50 << "_";
+				<< " " << -msg.angular.z*200 << "_";
 
 		ser.write(cmd_sub.str());
 		ser.flush();
