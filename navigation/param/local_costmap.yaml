@@ -11,3 +11,19 @@ local_costmap:
   width: 1.8
   height: 1.8
   resolution: 0.01
+  plugins:
+    - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
+    - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
+  obstacle_layer:
+    plugin: "nav2_costmap_2d::ObstacleLayer"
+    enabled: True
+    observation_sources: scan pointcloud
+    scan:
+      topic: /scan
+      data_type: "LaserScan"
+    pointcloud:
+      topic: /camera/depth/color/points
+      data_type: "PointCloud2"
+      clearing: True
+      marking: True
+    always_send_full_costmap: True

@@ -581,7 +581,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
+        xyz="-0.24 0.03 -0.308"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -595,7 +595,7 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="-0.24 0.03 -0.308"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -607,7 +607,7 @@
     name="Joint6"
     type="fixed">
     <origin
-      xyz="0 0 0"
+      xyz="0.24 -0.03 0.308"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -1063,7 +1063,7 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
+        xyz="-0.18 0.0325 -0.308"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -1077,7 +1077,7 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="-0.18 0.0325 -0.308"
         rpy="0 0 0" />
       <geometry>
         <mesh
@@ -1085,11 +1085,12 @@
       </geometry>
     </collision>
   </link>
+  
   <joint
     name="Joint15"
     type="fixed">
     <origin
-      xyz="0 0 0"
+      xyz="0.18 -0.0325 0.308"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -2225,7 +2226,7 @@
     <inertial>
       <origin
         xyz="5.73941775963982E-05 -0.0547817281545586 0.000662361701355196"
-        rpy="0 0 0" />
+        rpy="0 1.57 0" />
       <mass
         value="1.15411724032787" />
       <inertia
@@ -2239,7 +2240,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.57 3.14 1.57" />
       <geometry>
         <mesh
           filename="package://cad_assembly_amr_final_1/meshes/R2000.STL" scale="0.001 0.001 0.001" />
@@ -2253,7 +2254,7 @@
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.57 3.14 1.57" />
       <geometry>
         <mesh
           filename="package://cad_assembly_amr_final_1/meshes/R2000.STL" scale="0.001 0.001 0.001" />
@@ -2264,8 +2265,8 @@
     name="joint_sensor_laser"
     type="fixed">
     <origin
-      xyz="0.18 -0.0325 0.308"
-      rpy="0 0 0" />
+      xyz="0 0 0"
+      rpy="3.14 0 0" />
     <parent
       link="Link15" />
     <child

@@ -7,7 +7,6 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1
-        - /TF1
         - /TF1/Frames1
         - /TF1/Tree1
         - /LaserScan1
@@ -20,7 +19,6 @@ Panels:
         - /Path1
         - /Polygon1
         - /PointCloud21
-        - /LaserScan2
       Splitter Ratio: 0.6309523582458496
     Tree Height: 725
   - Class: rviz/Selection
@@ -40,7 +38,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: LaserScan
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -69,18 +67,218 @@ Visualization Manager:
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
-      Enabled: false
+      Enabled: true
       Links:
         All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        Link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link10:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link11:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link12:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link13:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link14:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link15:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link16:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link17:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link18:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link19:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link20:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link21:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link22:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link23:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link24:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link25:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link26:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link27:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link28:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link29:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link30:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link31:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link32:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link33:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link34:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link35:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link36:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link7:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link8:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Link9:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        sensor_laser:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
-      Value: false
+      Value: true
       Visual Enabled: true
     - Class: rviz/TF
       Enabled: true
@@ -152,7 +350,7 @@ Visualization Manager:
         Link5:
           Value: false
         Link6:
-          Value: false
+          Value: true
         Link7:
           Value: false
         Link8:
@@ -160,15 +358,41 @@ Visualization Manager:
         Link9:
           Value: false
         base_link:
+          Value: false
+        camera_accel_frame:
+          Value: true
+        camera_accel_optical_frame:
+          Value: true
+        camera_color_frame:
+          Value: true
+        camera_color_optical_frame:
+          Value: true
+        camera_depth_frame:
+          Value: true
+        camera_depth_optical_frame:
+          Value: true
+        camera_gyro_frame:
+          Value: true
+        camera_gyro_optical_frame:
+          Value: true
+        camera_infra1_frame:
+          Value: true
+        camera_infra1_optical_frame:
+          Value: true
+        camera_infra2_frame:
+          Value: true
+        camera_infra2_optical_frame:
           Value: true
         left_wheel:
           Value: false
+        map:
+          Value: true
         odom:
           Value: false
         right_wheel:
           Value: false
         sensor_laser:
-          Value: true
+          Value: false
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -176,83 +400,101 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        odom:
-          base_link:
-            Link1:
-              {}
-            Link10:
-              {}
-            Link11:
-              {}
-            Link12:
-              {}
-            Link13:
-              {}
-            Link14:
-              {}
-            Link15:
-              sensor_laser:
+        map:
+          odom:
+            base_link:
+              Link1:
                 {}
-            Link16:
-              {}
-            Link17:
-              {}
-            Link18:
-              {}
-            Link19:
-              {}
-            Link2:
-              {}
-            Link20:
-              {}
-            Link21:
-              {}
-            Link22:
-              {}
-            Link23:
-              {}
-            Link24:
-              {}
-            Link25:
-              {}
-            Link26:
-              {}
-            Link27:
-              {}
-            Link28:
-              {}
-            Link29:
-              {}
-            Link3:
-              {}
-            Link30:
-              {}
-            Link31:
-              {}
-            Link32:
-              {}
-            Link33:
-              {}
-            Link34:
-              right_wheel:
+              Link10:
                 {}
-            Link35:
-              left_wheel:
+              Link11:
                 {}
-            Link36:
-              {}
-            Link4:
-              {}
-            Link5:
-              {}
-            Link6:
-              {}
-            Link7:
-              {}
-            Link8:
-              {}
-            Link9:
-              {}
+              Link12:
+                {}
+              Link13:
+                {}
+              Link14:
+                {}
+              Link15:
+                sensor_laser:
+                  {}
+              Link16:
+                {}
+              Link17:
+                {}
+              Link18:
+                {}
+              Link19:
+                {}
+              Link2:
+                {}
+              Link20:
+                {}
+              Link21:
+                {}
+              Link22:
+                {}
+              Link23:
+                {}
+              Link24:
+                {}
+              Link25:
+                {}
+              Link26:
+                {}
+              Link27:
+                {}
+              Link28:
+                {}
+              Link29:
+                {}
+              Link3:
+                {}
+              Link30:
+                {}
+              Link31:
+                {}
+              Link32:
+                {}
+              Link33:
+                {}
+              Link34:
+                right_wheel:
+                  {}
+              Link35:
+                left_wheel:
+                  {}
+              Link36:
+                {}
+              Link4:
+                {}
+              Link5:
+                {}
+              Link6:
+                camera_accel_frame:
+                  camera_accel_optical_frame:
+                    {}
+                camera_color_frame:
+                  camera_color_optical_frame:
+                    {}
+                camera_depth_frame:
+                  camera_depth_optical_frame:
+                    {}
+                camera_gyro_frame:
+                  camera_gyro_optical_frame:
+                    {}
+                camera_infra1_frame:
+                  camera_infra1_optical_frame:
+                    {}
+                camera_infra2_frame:
+                  camera_infra2_optical_frame:
+                    {}
+              Link7:
+                {}
+              Link8:
+                {}
+              Link9:
+                {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -275,9 +517,9 @@ Visualization Manager:
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
-      Size (Pixels): 3
-      Size (m): 0.05000000074505806
-      Style: Flat Squares
+      Size (Pixels): 1
+      Size (m): 0.029999999329447746
+      Style: Spheres
       Topic: /scan
       Unreliable: false
       Use Fixed Frame: true
@@ -429,8 +671,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 10
-        Min Value: -10
+        Max Value: 1.9655276536941528
+        Min Value: 0.1330469846725464
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -438,7 +680,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: RGB8
       Decay Time: 0
-      Enabled: false
+      Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
@@ -446,38 +688,10 @@ Visualization Manager:
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
-      Size (Pixels): 3
-      Size (m): 0.009999999776482582
-      Style: Flat Squares
+      Size (Pixels): 5
+      Size (m): 0.10000000149011612
+      Style: Points
       Topic: /camera/depth/color/points
-      Unreliable: false
-      Use Fixed Frame: true
-      Use rainbow: true
-      Value: false
-    - Alpha: 1
-      Autocompute Intensity Bounds: true
-      Autocompute Value Bounds:
-        Max Value: 10
-        Min Value: -10
-        Value: true
-      Axis: Z
-      Channel Name: intensity
-      Class: rviz/LaserScan
-      Color: 255; 255; 255
-      Color Transformer: Intensity
-      Decay Time: 0
-      Enabled: true
-      Invert Rainbow: false
-      Max Color: 255; 255; 255
-      Min Color: 0; 0; 0
-      Name: LaserScan
-      Position Transformer: XYZ
-      Queue Size: 10
-      Selectable: true
-      Size (Pixels): 3
-      Size (m): 0.029999999329447746
-      Style: Flat Squares
-      Topic: /scan_1
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -486,7 +700,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: base_link
+    Fixed Frame: map
     Frame Rate: 30
   Name: root
   Tools:
@@ -510,7 +724,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.08323478698730469
+      Distance: 7.758880138397217
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -518,17 +732,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.8757878541946411
-        Y: 0.09953246265649796
-        Z: 0.38843944668769836
+        X: 0.5063360333442688
+        Y: -0.9998130798339844
+        Z: 0.6079937815666199
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.30143555998802185
+      Pitch: 1.5697963237762451
       Target Frame: <Fixed Frame>
-      Yaw: 6.20797061920166
+      Yaw: 3.1180126667022705
     Saved: ~
 Window Geometry:
   Displays:

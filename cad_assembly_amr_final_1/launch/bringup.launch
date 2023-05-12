@@ -42,8 +42,5 @@
 
 <!--        Realsense launch       -->
   <include file="$(find realsense2_camera)/launch/rs_d435_camera_with_model.launch" />
-  <!--      Point_2_Laser            -->
-  <include file="$(find pointcloud_to_laserscan)/launch/sample_node.launch" />
-
 
 </launch>

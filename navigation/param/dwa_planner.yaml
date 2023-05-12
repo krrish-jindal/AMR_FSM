@@ -46,5 +46,5 @@ DWAPlannerROS:
   publish_traj_pc : true
   publish_cost_grid_pc: true
   
-  scan_topic1: /scan
-  scan_topic1: /scan_1
+  scan_topic: /scan
+  # scan_topic1: /scan_1
