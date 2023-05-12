@@ -90,8 +90,8 @@
   <arg name="publish_tf"               default="true"/>
   <arg name="tf_publish_rate"          default="0"/> <!-- 0 - static transform -->
 
-  <arg name="odom_frame_id"            default="$(arg tf_prefix)_odom_frame"/>
-  <arg name="topic_odom_in"            default="$(arg tf_prefix)/odom_in"/>
+  <arg name="odom_frame_id"            default="odom"/>
+  <arg name="topic_odom_in"            default="/odom"/>
   <arg name="calib_odom_file"          default=""/>
   <arg name="publish_odom_tf"          default="true"/>
 

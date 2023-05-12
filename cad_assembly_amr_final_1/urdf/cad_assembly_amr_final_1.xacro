@@ -2220,24 +2220,26 @@
 
 <!--                     LIDAR LINK               -->
 
-
-<link
+  <link
     name="sensor_laser">
     <inertial>
       <origin
-        xyz="0.0 0.0 0.0"
-        rpy="0.0 0.0 0.0" />
+        xyz="5.73941775963982E-05 -0.0547817281545586 0.000662361701355196"
+        rpy="0 0 0" />
       <mass
-        value="0.01" />
+        value="1.15411724032787" />
       <inertia
-        ixx="0.000145833" ixy = "0" ixz ="0"
-               iyy="0.000" iyz = "0"
-               izz="0.000208"  />
+        ixx="0.00169670713331925"
+        ixy="8.3068554945323E-08"
+        ixz="-1.47480764218124E-07"
+        iyy="0.00298663361197173"
+        iyz="8.62121560025982E-08"
+        izz="0.00167881991277623" />
     </inertial>
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="1.56 0 0" />
+        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://cad_assembly_amr_final_1/meshes/R2000.STL" scale="0.001 0.001 0.001" />
@@ -2251,10 +2253,10 @@
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="1.56 0 0" />
+        rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://cad_assembly_amr_final_1/meshes/R2000.STL"  scale="0.001 0.001 0.001" />
+          filename="package://cad_assembly_amr_final_1/meshes/R2000.STL" scale="0.001 0.001 0.001" />
       </geometry>
     </collision>
   </link>
@@ -2269,12 +2271,8 @@
     <child
       link="sensor_laser" />
     <axis
-      xyz="0 0 0" />
-  </joint>   
-
-
-    
-<!-- joint_sensor_laser -->
-    <!-- <origin xyz="0.18 -0.0325 0.325" rpy="0.0 0.0 0.0"/> -->
+      xyz="0 0 0 0 0 0" />
+   
+  </joint>
 
 </robot>
