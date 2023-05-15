@@ -11,6 +11,9 @@ local_costmap:
   width: 1.8
   height: 1.8
   resolution: 0.01
+  inflation_radius: 0.12
+  cost_scaling_factor: 3.0
+
   plugins:
     - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
     - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
@@ -21,6 +24,9 @@ local_costmap:
     scan:
       topic: /scan
       data_type: "LaserScan"
+      clearing: True
+      marking: True
+
     pointcloud:
       topic: /camera/depth/color/points
       data_type: "PointCloud2"
