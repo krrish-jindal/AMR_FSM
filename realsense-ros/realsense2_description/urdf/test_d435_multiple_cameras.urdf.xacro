@@ -3,12 +3,12 @@
   <xacro:arg name="use_nominal_extrinsics" default="false"/>
   <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
 
-  <link name="base_link" />
-  <xacro:sensor_d435 parent="base_link" name="camera1" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+  <link name="base_link1" />
+  <xacro:sensor_d435 parent="base_link1" name="camera1" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
     <origin xyz="0.1 0 0" rpy="0 0 0"/>
   </xacro:sensor_d435>
 
-  <xacro:sensor_d435 parent="base_link" name="camera2" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
-    <origin xyz="0.18 -0.0325 0.308" rpy="0 0 3.1456"/>
+  <xacro:sensor_d435 parent="base_link1" name="camera2" use_nominal_extrinsics="$(arg use_nominal_extrinsics)">
+    <origin xyz="-0.1 0 0" rpy="0 0 3.1456"/>
   </xacro:sensor_d435>
 </robot>
