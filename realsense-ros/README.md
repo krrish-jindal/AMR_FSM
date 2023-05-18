@@ -287,7 +287,7 @@ roslaunch realsense2_camera demo_t265.launch
 The wrapper publishes static transformations(TFs). The Frame Ids are divided into 3 groups:
 - ROS convention frames: follow the format of <tf_prefix>\_<\_stream>"\_frame" for example: camera_depth_frame, camera_infra1_frame, etc.
 - Original frame coordinate system: with the suffix of <\_optical_frame>. For example: camera_infra1_optical_frame. Check the device documentation for specific coordinate system for each stream.
-- base_link1: For example: camera_link. A reference frame for the device. In D400 series and SR300 it is the depth frame. In T265, the pose frame.
+- base_link: For example: camera_link. A reference frame for the device. In D400 series and SR300 it is the depth frame. In T265, the pose frame.
 
 
 ### realsense2_description package:

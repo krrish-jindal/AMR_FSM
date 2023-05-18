@@ -63,7 +63,7 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        base_link1:
+        base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -87,7 +87,7 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        base_link1:
+        base_link:
           Value: true
         camera_bottom_screw_frame:
           Value: false
@@ -115,7 +115,7 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        base_link1:
+        base_link:
           camera_bottom_screw_frame:
             camera_link:
               camera_color_frame:
@@ -166,7 +166,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: base_link1
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
