@@ -16,6 +16,8 @@
     <rosparam file="$(find navigation)/param/move_base.yaml" command="load" />
     <rosparam file="$(find navigation)/param/dwa_planner.yaml" command="load" />
     <rosparam file="$(find navigation)/param/trajectory_planner.yaml" command="load" />
+    <rosparam file="$(find navigation)/param/global_planner_params.yaml" command="load" />
+
 
     <remap from="cmd_vel" to="$(arg cmd_vel_topic)"/>
     <remap from="odom" to="$(arg odom_topic)"/>

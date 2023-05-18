@@ -1,5 +1,5 @@
 local_costmap:
-  global_frame: odom
+  global_frame: map
   robot_base_frame: base_link
 
   update_frequency: 10.0
@@ -7,35 +7,11 @@ local_costmap:
   transform_tolerance: 0.09  
 
   static_map: false  
-  rolling_window: True
+  rolling_window: true
   width: 1.8
   height: 1.8
   resolution: 0.01
-  cost_scaling_factor: 4.0
-  track_unknown_space: false
-  inflation_radius: 0.17
 
-  plugins:
-    - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
-    - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
-  obstacle_layer:
-    plugin: "nav2_costmap_2d::ObstacleLayer"
-    enabled: True
-    observation_sources: scan pointcloud
-    scan:
-      topic: /scan
-      data_type: "LaserScan"
-      # clearing: True
-
-      marking: True
-      # obstacle_max_range: 4.0
-      # obstacle_min_range: 0.2
-      footprint_clearing_enabled: True
-    pointcloud:
-      topic: /output
-      data_type: "PointCloud2"
-      clearing: True
-      marking: True
-      # inflation_radius: 0.09
-
-    always_send_full_costmap: True
+plugins:
+    - {name: obstacle_layer,      type: "costmap_2d::VoxelLayer"}
+    # - {name: inflation_layer,     type: "costmap_2d::InflationLayer"}
