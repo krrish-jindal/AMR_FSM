@@ -1,15 +1,11 @@
-obstacle_range: 1
-raytrace_range: 1.5
-footprint: [[-0.6,-0.35],[-0.6,0.35],[0.35,0.35],[0.35,-0.35]]
-footprint_padding: 0.04
-
+obstacle_range: 3.5
+raytrace_range: 4.0
+footprint: [[-0.02, -0.02], [-0.02, 0.02], [0.02, 0.02], [0.02, -0.02]]
 inflation_radius: 1.7
 transform_tolerance: 0.3
-# gui_publish_rate: 20.0
 
 observation_sources: scan
 scan:
-  sensor_frame: sensor_laser
   data_type: LaserScan
   topic: /scan
   marking: true
@@ -17,7 +13,3 @@ scan:
 
 map_type: costmap
 
-plugins:
-    - {name: static_map,  type: "costmap_2d::StaticLayer"}
-
-# not loading i think

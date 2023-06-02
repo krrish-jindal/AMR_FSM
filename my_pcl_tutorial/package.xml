@@ -53,6 +53,18 @@
   <build_depend>pcl_ros</build_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>sensor_msgs</build_depend>
+   <build_depend>dynamic_reconfigure</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>filters</build_depend>
+  <build_depend>message_filters</build_depend>
+  <build_depend>laser_geometry</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>rostest</build_depend>
+  <build_depend>angles</build_depend>
+  <build_depend>nodelet</build_depend>
+
   <build_export_depend>pcl_conversions</build_export_depend>
   <build_export_depend>pcl_ros</build_export_depend>
   <build_export_depend>roscpp</build_export_depend>
@@ -63,7 +75,16 @@
   <exec_depend>pcl_ros</exec_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
-
+ <exec_depend>dynamic_reconfigure</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>tf</exec_depend>
+  <exec_depend>filters</exec_depend>
+  <exec_depend>message_filters</exec_depend>
+  <exec_depend>laser_geometry</exec_depend>
+  <exec_depend>pluginlib</exec_depend>
+  <exec_depend>angles</exec_depend>
+  <exec_depend>nodelet</exec_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

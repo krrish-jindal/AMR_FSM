@@ -1,11 +1,11 @@
 <launch>
 
-	<node name="map_server" pkg="map_server" type="map_server" args="$(find mr_robot_nav)/maps/fsm_lab.yaml" />
+	<node name="map_server" pkg="map_server" type="map_server" args="$(find navstack_pub)/maps/my_gmap10.yaml">
+		<param name="frame_id" value="map"/>
+	</node>
 	
 	<include file="$(find mr_robot_nav)/launch/amcl.launch" />
 	<include file="$(find mr_robot_nav)/launch/move_base.launch" />
 	
-	<!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ebot_nav)/config/my.rviz" output = "screen"/> -->
-
 </launch>
 

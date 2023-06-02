@@ -2,8 +2,8 @@
 <launch>
   <arg name="frame_id" default="sensor_laser"/>
   <arg name="scanner_ip" default="20.0.10.9"/>
-  <arg name="scan_frequency" default="50"/>
-  <arg name="samples_per_scan" default="5000"/>
+  <arg name="scan_frequency" default="20"/>
+  <arg name="samples_per_scan" default="1000"/>
 
   <!-- R2000 Driver -->
   <node pkg="pepperl_fuchs_r2000" type="r2000_node" name="r2000_node" respawn="true" output="screen">

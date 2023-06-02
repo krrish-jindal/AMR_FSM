@@ -1,7 +1,7 @@
 odom_model_type: "diff"
 odom_alpha5: 0.1
-transform_tolerance: 0.2 
-gui_publish_rate: 50.0
+transform_tolerance: 1.0 
+gui_publish_rate: 10.0
 laser_max_beams: 30
 min_particles: 100
 max_particles: 5000
@@ -29,6 +29,8 @@ resample_interval: 1
 transform_tolerance: 1.0
 recovery_alpha_slow: 0.0
 recovery_alpha_fast: 0.0
-
+initial_pose_x: -3
+initial_pose_y: 1
+initial_pose_a: 0
 
 

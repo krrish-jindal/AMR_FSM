@@ -14,7 +14,7 @@
   <!-- </group> -->
 
   <!-- R2000 Driver -->
-  <node pkg="pf_driver" type="ros_main" name="r2000_node" output="screen">
+  <node machine="fsm" pkg="pf_driver" type="ros_main" name="r2000_node" output="screen">
     <param name="device" value="$(arg device)"/>
     <rosparam file="$(find pf_driver)/config/r2000_params.yaml" command="load"/>
   </node>

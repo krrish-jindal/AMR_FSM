@@ -96,12 +96,12 @@ private:
 	{
 		std::stringstream cmd_sub;
 		cmd_sub << "!G 1"
-				<< " " << msg.linear.x*500 << "_"
+				<< " " << msg.linear.x*700 << "_"
 				<< "!G 2"
-				<< " " << -msg.angular.z*200 << "_";
+				<< " " << -msg.angular.z*110 << "_";
 
 		ser.write(cmd_sub.str());
-		ser.flush();
+		// ser.flush();
 		ROS_INFO_STREAM(cmd_sub.str());
 	}
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <launch>
+  <machine name="fsm" address="10.194.173.205" password="123456" env-loader="/home/fsm/krrish/devel/env.sh" user="fsm"/>
 
 <!--         URDF launch        -->
   <arg
@@ -24,14 +25,15 @@
     args="-d $(find roboteq_motor_controller_driver)/config/rviz.rviz"/>
     <!-- args="-d $(find cad_assembly_amr_final_1)/config/navigation.rviz"/> -->
 
+  <node pkg="navstack_pub" type="rviz_click_to_2d" name="rviz_click_to_2d"/>
 
 
 <!--       Roboteq motor driver      -->
-<rosparam command="load" file="$(find roboteq_motor_controller_driver)/config/query.yaml" />
-<node name = "roboteq_motor_controller_driver" pkg = "roboteq_motor_controller_driver" type = "roboteq_motor_controller_driver_node" output = "screen">
+<rosparam  command="load" file="$(find roboteq_motor_controller_driver)/config/query.yaml" />
+<node  name = "roboteq_motor_controller_driver" pkg = "roboteq_motor_controller_driver" type = "roboteq_motor_controller_driver_node" output = "screen">
   </node>
 <!--        Roboteq odom_cal          -->
-  <node name = "diff_odom" pkg = "roboteq_motor_controller_driver" type = "diff_odom" output = "screen">
+  <node  name = "diff_odom" pkg = "roboteq_motor_controller_driver" type = "diff_odom" output = "screen">
   </node>
 
 

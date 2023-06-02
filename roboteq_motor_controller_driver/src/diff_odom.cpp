@@ -132,7 +132,7 @@ void Odometry_calc::init_variables()
 	then = ros::Time::now();
 
 
-	enc_left = 10;
+	enc_left = 0;
 	enc_right = 0;
 
 	dx = 0;

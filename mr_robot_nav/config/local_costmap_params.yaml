@@ -1,18 +1,14 @@
 local_costmap:
-  global_frame: odom
-  robot_base_frame: base_link 
-  update_frequency: 9.0 #before 5.0
-  publish_frequency: 10.0 #before 2.0
-  static_map: true
+  global_frame: "map"
+  robot_base_frame: "base_link" 
+  update_frequency: 5.0 #before 5.0
+  publish_frequency: 2.0 #before 2.0
+  static_map: false
   rolling_window: true
-  width: 1.5
-  height: 1.5
-  resolution: 0.0155 #increase to for higher res 0.025
-  transform_tolerance: 0.7
-  cost_scaling_factor: 5
-  inflation_radius: 0.25
-  footprint: [[-0.6,-0.35],[-0.6,0.35],[0.35,0.35],[0.35,-0.35]]
-  footprint_padding: 0.04
+  width: 2.0
+  height: 2.0
+  resolution: 0.025 #increase to for higher res 0.025
+  transform_tolerance: 0.5
+  cost_scaling_factor: 5.0
+  inflation_radius: 1.5
 
-
-#param fixed
