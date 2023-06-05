@@ -4,8 +4,8 @@
   <arg name="z_pos" default="0.0"/>
 
 <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find cad_assembly_amr_final_1)/gazebo/model/my_ground_plane/model.world"/>
-    <arg name="paused" value="true"/>
+    <!-- <arg name="world_name" value="$(find cad_assembly_amr_final_1)/gazebo/model/my_ground_plane/model.world"/> -->
+    <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
     <arg name="headless" value="false"/>

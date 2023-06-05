@@ -46,7 +46,7 @@ ScanToCloudConverter::ScanToCloudConverter(ros::NodeHandle nh, ros::NodeHandle n
   cloud_publisher_ = nh_.advertise<PointCloudT>(
     "cloud", 1); 
   scan_subscriber_ = nh_.subscribe(
-    "/laser/scan", 1, &ScanToCloudConverter::scanCallback, this);
+    "/scan", 1, &ScanToCloudConverter::scanCallback, this);
 }
 
 ScanToCloudConverter::~ScanToCloudConverter()

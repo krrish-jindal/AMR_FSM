@@ -205,3 +205,5 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+add_executable(cloud_segment src/cloud_segment.cpp)
+target_link_libraries(cloud_segment ${catkin_LIBRARIES})

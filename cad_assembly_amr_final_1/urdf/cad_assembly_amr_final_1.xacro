@@ -244,7 +244,7 @@
         xyz="-5.73941775350029E-05 0.0547817281545965 0.000662361701394734"
         rpy="0 0 0" />
       <mass
-        value="1.15411724032787" />
+        value="20.15411724032787" />
       <inertia
         ixx="0.00169670713331966"
         ixy="8.30685548989815E-08"
@@ -2226,7 +2226,7 @@
     <inertial>
       <origin
         xyz="5.73941775963982E-05 -0.0547817281545586 0.000662361701355196"
-        rpy="0 1.57 0" />
+        rpy="0 0 0" />
       <mass
         value="1.15411724032787" />
       <inertia
@@ -2240,7 +2240,7 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="1.57 3.14 1.57" />
+        rpy="1.57 0 1.57" />
       <geometry>
         <mesh
           filename="package://cad_assembly_amr_final_1/meshes/R2000.STL" scale="0.001 0.001 0.001" />
@@ -2266,7 +2266,7 @@
     type="fixed">
     <origin
       xyz="0 0 0"
-      rpy="3.14 0 0" />
+      rpy="0 0 0" />
     <parent
       link="Link15" />
     <child
