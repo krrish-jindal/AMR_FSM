@@ -6,7 +6,7 @@
 <!--         URDF launch        -->
   <arg
     name="cad_assembly_amr_final_1" />
-  <includ  machine ="fsm" file="$(find cad_assembly_amr_final_1)/config/joint_names_cad_assembly_amr_final_1.launch" />
+  <include file="$(find cad_assembly_amr_final_1)/config/joint_names_cad_assembly_amr_final_1.launch" />
    
   <param
     name="robot_description"
@@ -28,6 +28,7 @@
 
 <!--       Roboteq motor driver      -->
 <rosparam command="load" file="$(find roboteq_motor_controller_driver)/config/query.yaml" />
+
 <node machine ="fsm" name = "roboteq_motor_controller_driver" pkg = "roboteq_motor_controller_driver" type = "roboteq_motor_controller_driver_node" output = "screen">
   </node>
 <!--        Roboteq odom_cal          -->
@@ -36,14 +37,14 @@
 
 
 <!--       PnF Lidar                  -->
-  <include machine ="fsm" file="$(find pepperl_fuchs_r2000)/launch/r2000.launch" />
+  <include file="$(find pepperl_fuchs_r2000)/launch/r2000.launch" />
 
 <!--        SCAN FILTER               -->
   <node machine ="fsm" name = "cloud_segment" pkg = "cloud_segment" type = "cloud_segment" output = "screen">
   </node>
   
 
-  <include machine ="fsm" file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch" />
+  <include  file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch" />
 
 
 
