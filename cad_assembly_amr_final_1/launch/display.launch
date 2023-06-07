@@ -23,9 +23,8 @@
     pkg="rviz"
     type="rviz"
     args="-d $(find roboteq_motor_controller_driver)/config/rviz.rviz"/>
-    <!-- args="-d $(find cad_assembly_amr_final_1)/config/navigation.rviz"/> -->
 
-  <node pkg="navstack_pub" type="rviz_click_to_2d" name="rviz_click_to_2d"/>
+  <!-- <node pkg="navstack_pub" type="rviz_click_to_2d" name="rviz_click_to_2d"/> -->
 
 
 <!--       Roboteq motor driver      -->
@@ -39,5 +38,14 @@
 
 <!--       PnF Lidar                  -->
   <include file="$(find pepperl_fuchs_r2000)/launch/r2000.launch" />
+
+
+
+<!--        SCAN FILTER               -->
+  <node  name = "cloud_segment" pkg = "cloud_segment" type = "cloud_segment" output = "screen">
+  </node>
+  
+  <include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch" />
+
 
 </launch>

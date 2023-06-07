@@ -459,14 +459,14 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 10
-        Min Value: -10
+        Max Value: 0.30799999833106995
+        Min Value: 0.30799999833106995
         Value: true
       Axis: Z
       Channel Name: intensity
       Class: rviz/LaserScan
       Color: 255; 255; 255
-      Color Transformer: Intensity
+      Color Transformer: AxisColor
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
@@ -476,10 +476,10 @@ Visualization Manager:
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
-      Size (Pixels): 1
+      Size (Pixels): 6
       Size (m): 0.029999999329447746
-      Style: Spheres
-      Topic: /scan
+      Style: Points
+      Topic: /scan_multi
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -495,7 +495,7 @@ Visualization Manager:
       Use Timestamp: false
       Value: true
     - Alpha: 0.800000011920929
-      Arrow Length: 0.30000001192092896
+      Arrow Length: 0.07000000029802322
       Axes Length: 0.30000001192092896
       Axes Radius: 0.009999999776482582
       Class: rviz/PoseArray
@@ -504,7 +504,7 @@ Visualization Manager:
       Head Length: 0.07000000029802322
       Head Radius: 0.029999999329447746
       Name: PoseArray
-      Queue Size: 3
+      Queue Size: 2
       Shaft Length: 0.23000000417232513
       Shaft Radius: 0.009999999776482582
       Shape: Arrow (Flat)
@@ -513,7 +513,7 @@ Visualization Manager:
       Value: false
     - Alpha: 0.699999988079071
       Class: rviz/Map
-      Color Scheme: raw
+      Color Scheme: costmap
       Draw Behind: false
       Enabled: true
       Name: Map
@@ -523,7 +523,7 @@ Visualization Manager:
       Value: true
     - Alpha: 0.699999988079071
       Class: rviz/Map
-      Color Scheme: map
+      Color Scheme: costmap
       Draw Behind: false
       Enabled: true
       Name: Map
@@ -655,6 +655,30 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /move_base/NavfnROS/plan
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -683,7 +707,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 8.154158592224121
+      Distance: 10.126932144165039
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -691,17 +715,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 2.6575512886047363
-        Y: -0.4083584249019623
-        Z: -0.04348316788673401
+        X: 0.442460834980011
+        Y: -1.8070687055587769
+        Z: -0.3741440176963806
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.329796552658081
+      Pitch: 1.5347963571548462
       Target Frame: <Fixed Frame>
-      Yaw: 3.125204086303711
+      Yaw: 2.4251978397369385
     Saved: ~
 Window Geometry:
   Displays:

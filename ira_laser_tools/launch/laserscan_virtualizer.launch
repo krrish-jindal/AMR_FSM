@@ -18,8 +18,8 @@ Publish a static coordinate transform to tf using an x/y/z offset and quaternion
 
 	<node pkg="ira_laser_tools" name="laserscan_virtualizer" type="laserscan_virtualizer" output="screen">
 		<param name="cloud_topic" value="/cloud_in"/>       <!-- INPUT POINT CLOUD -->
-		<param name="base_frame" value="/laser_frame"/>     <!-- REFERENCE FRAME WHICH LASER(s) ARE RELATED-->
-		<param name="output_laser_topic" value ="/scan" />  <!-- VIRTUAL LASER OUTPUT TOPIC, LEAVE VALUE EMPTY TO PUBLISH ON THE VIRTUAL LASER NAMES (param: output_laser_scan) -->
-		<param name="virtual_laser_scan" value ="scansx scandx" /> <!-- LIST OF THE VIRTUAL LASER SCANS. YOU MUST PROVIDE THE STATIC TRANSFORMS TO TF, SEE ABOVE -->
+		<param name="base_frame" value="/sensor_laser"/>     <!-- REFERENCE FRAME WHICH LASER(s) ARE RELATED-->
+		<param name="output_laser_topic" value ="/scan_merge" />  <!-- VIRTUAL LASER OUTPUT TOPIC, LEAVE VALUE EMPTY TO PUBLISH ON THE VIRTUAL LASER NAMES (param: output_laser_scan) -->
+		<param name="virtual_laser_scan" value ="/out1 /out2 /out3 /out4 /out5 /out6" /> <!-- LIST OF THE VIRTUAL LASER SCANS. YOU MUST PROVIDE THE STATIC TRANSFORMS TO TF, SEE ABOVE -->
 	</node>
 </launch>

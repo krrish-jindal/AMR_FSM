@@ -22,7 +22,7 @@ void scanCallback1(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
   for (size_t i = 0; i < scan_msg->ranges.size(); ++i) {
     float angle = scan_msg->angle_min + i * scan_msg->angle_increment;
 
-    if (angle <= -0.99 || angle >= 1.1) {
+    if (angle <= -1 || angle >= 1) {
       // Set the filtered range value to a specific value or NaN
       filtered_scan_msg.ranges[i] = 0.0;  // Set to 0.0 for example
     }
@@ -43,7 +43,7 @@ void scanCallback2(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
   for (size_t i = 0; i < scan_msg->ranges.size(); ++i) {
     float angle = scan_msg->angle_min + i * scan_msg->angle_increment;
 
-    if (angle <= 1.4 || angle >= 2.23) {
+    if (angle <= 1.5 || angle >= 2.23) {
       // Set the filtered range value to a specific value or NaN
       filtered_scan_msg.ranges[i] = 0.0;  // Set to 0.0 for example
     }
@@ -64,7 +64,7 @@ void scanCallback3(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
   for (size_t i = 0; i < scan_msg->ranges.size(); ++i) {
     float angle = scan_msg->angle_min + i * scan_msg->angle_increment;
 
-    if (angle >= -2.867 && angle <= 2.767) {
+    if (angle >= -2.82 && angle <= 2.82) {
       // Set the filtered range value to a specific value or NaN
       filtered_scan_msg.ranges[i] = 0.0;  // Set to 0.0 for example
     }
@@ -85,7 +85,7 @@ void scanCallback4(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
   for (size_t i = 0; i < scan_msg->ranges.size(); ++i) {
     float angle = scan_msg->angle_min + i * scan_msg->angle_increment;
 
-    if (angle <= 2.4 || angle >= 2.67) {
+    if (angle <= 2.46 || angle >= 2.67) {
       // Set the filtered range value to a specific value or NaN
       filtered_scan_msg.ranges[i] = 0.0;  // Set to 0.0 for example
     }
@@ -106,7 +106,7 @@ void scanCallback5(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
   for (size_t i = 0; i < scan_msg->ranges.size(); ++i) {
     float angle = scan_msg->angle_min + i * scan_msg->angle_increment;
 
-    if (angle >= -2.5 || angle <= -2.7) {
+    if (angle >= -2.44 || angle <= -2.57) {
       // Set the filtered range value to a specific value or NaN
       filtered_scan_msg.ranges[i] = 0.0;  // Set to 0.0 for example
     }
@@ -116,6 +116,10 @@ void scanCallback5(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
   publish5.publish(filtered_scan_msg);
 }
 
+
+
+//     RIGHT FRONT AMR
+
 void scanCallback6(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
 {
   sensor_msgs::LaserScan filtered_scan_msg = *scan_msg;  // Make a copy of the input scan
@@ -124,7 +128,7 @@ void scanCallback6(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
   for (size_t i = 0; i < scan_msg->ranges.size(); ++i) {
     float angle = scan_msg->angle_min + i * scan_msg->angle_increment;
 
-    if (angle <= -2.3 || angle >= -1.34) {
+    if (angle <= -2.2 || angle >= -1.43) {
       // Set the filtered range value to a specific value or NaN
       filtered_scan_msg.ranges[i] = 0.0;  // Set to 0.0 for example
     }
