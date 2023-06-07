@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <launch>
+  <machine name="fsm" address="10.194.173.205" password="123456" env-loader="/home/fsm/krrish/devel/env.sh" user="fsm"/>
 
 <!--         URDF launch        -->
   <arg
     name="cad_assembly_amr_final_1" />
-  <include file="$(find cad_assembly_amr_final_1)/config/joint_names_cad_assembly_amr_final_1.launch" />
+  <includ  machine ="fsm" file="$(find cad_assembly_amr_final_1)/config/joint_names_cad_assembly_amr_final_1.launch" />
    
   <param
     name="robot_description"
@@ -27,19 +28,26 @@
 
 <!--       Roboteq motor driver      -->
 <rosparam command="load" file="$(find roboteq_motor_controller_driver)/config/query.yaml" />
-<node name = "roboteq_motor_controller_driver" pkg = "roboteq_motor_controller_driver" type = "roboteq_motor_controller_driver_node" output = "screen">
+<node machine ="fsm" name = "roboteq_motor_controller_driver" pkg = "roboteq_motor_controller_driver" type = "roboteq_motor_controller_driver_node" output = "screen">
   </node>
 <!--        Roboteq odom_cal          -->
-  <node name = "diff_odom" pkg = "roboteq_motor_controller_driver" type = "diff_odom" output = "screen">
+  <node machine ="fsm" name = "diff_odom" pkg = "roboteq_motor_controller_driver" type = "diff_odom" output = "screen">
   </node>
 
 
 <!--       PnF Lidar                  -->
-  <include file="$(find pepperl_fuchs_r2000)/launch/r2000.launch" />
+  <include machine ="fsm" file="$(find pepperl_fuchs_r2000)/launch/r2000.launch" />
+
+<!--        SCAN FILTER               -->
+  <node machine ="fsm" name = "cloud_segment" pkg = "cloud_segment" type = "cloud_segment" output = "screen">
+  </node>
+  
+
+  <include machine ="fsm" file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch" />
 
 
 
 <!--        Realsense launch       -->
-  <include file="$(find realsense2_camera)/launch/rs_d435_camera_with_model.launch" />
+  <!-- <include machine ="fsm" file="$(find realsense2_camera)/launch/rs_d435_camera_with_model.launch" /> -->
 
 </launch>
