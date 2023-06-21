@@ -4,9 +4,17 @@
   <machine name="fsm" address="10.194.173.205" password="123456" env-loader="/home/fsm/krrish/devel/env.sh" user="fsm"/>
 
 <!--         URDF launch        -->
-  <arg
-    name="cad_assembly_amr_final_1" />
-  <include file="$(find cad_assembly_amr_final_1)/config/joint_names_cad_assembly_amr_final_1.launch" />
+
+<rosparam file="$(find cad_assembly_amr_final_1)/config/joint_names_cad_assembly_amr_final_1.yaml" command="load"/>
+<node machine ="fsm" args="joint_right_position_controller left_joint_position_controller joint_state_controller " name="controller_spawner" ns="cad_assembly_amr_final_1" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+<node machine ="fsm" name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+  <remap from="/joint_states" to="/joint_states"/>
+</node>
+
+
+  <!-- <arg -->
+    <!-- name="cad_assembly_amr_final_1" /> -->
+  <!-- <include file="$(find cad_assembly_amr_final_1)/config/joint_names_cad_assembly_amr_final_1.launch" /> -->
    
   <param
     name="robot_description"
@@ -22,6 +30,7 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
+    
     args="-d $(find roboteq_motor_controller_driver)/config/rviz.rviz"/>
 
 
@@ -37,7 +46,21 @@
 
 
 <!--       PnF Lidar                  -->
-  <include file="$(find pepperl_fuchs_r2000)/launch/r2000.launch" />
+  <!-- <include file="$(find pepperl_fuchs_r2000)/launch/r2000.launch" /> -->
+
+  <arg name="frame_id" default="sensor_laser"/>
+  <arg name="scanner_ip" default="20.0.10.9"/>
+  <arg name="scan_frequency" default="20"/>
+  <arg name="samples_per_scan" default="1800"/>
+
+  <!-- R2000 Driver -->
+  <node machine ="fsm" pkg="pepperl_fuchs_r2000" type="r2000_node" name="r2000_node" respawn="true" output="screen">
+    <param  name="frame_id" value="$(arg frame_id)"/>
+    <param name="scanner_ip" value="$(arg scanner_ip)"/>
+    <param name="scan_frequency" value="$(arg scan_frequency)"/>
+    <param name="samples_per_scan" value="$(arg samples_per_scan)"/>
+  </node>
+
 
 <!--        SCAN FILTER               -->
   <node machine ="fsm" name = "cloud_segment" pkg = "cloud_segment" type = "cloud_segment" output = "screen">

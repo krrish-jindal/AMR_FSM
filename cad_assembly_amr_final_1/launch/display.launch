@@ -47,5 +47,9 @@
   
   <include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch" />
 
+  <include file="$(find realsense2_camera)/launch/rs_d435_camera_with_model.launch" />
+
+  <node  name = "pcl" pkg = "my_pcl_tutorial" type = "pcl" output = "screen">
+  </node>
 
 </launch>

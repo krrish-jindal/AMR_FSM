@@ -4,7 +4,7 @@
   <!-- Arguments -->
  <!-- <node pkg="tf" type="static_transform_publisher" name="odom_to_map" -->
     <!-- args="0 0 0 0 0 0  /map /odom 100" /> -->
-  <arg name="map_file" default="$(find navigation)/maps/fsm_out.yaml"/>  
+  <arg name="map_file" default="$(find navigation)/maps/edit_lab.yaml"/>  
   <arg name="move_forward_only" default="false"/>
 
   <!-- Map server -->
