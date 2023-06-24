@@ -10,3 +10,14 @@ oscillation_distance: 0.3
 clearing_rotation_allowed : false
 recovery_behaviour_enabled : false
 base_local_planner: base_local_planner/TrajectoryPlannerROS
+recovery_behaviors:
+  - name: 'conservative_reset'
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+  - name: 'aggressive_reset'
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+conservative_reset:
+  reset_distance: 0.1
+  layer_names: ['obstacle_layer']
+aggressive_reset:
+  reset_distance: 0.0
+  layer_names: ['obstacle_layer']
