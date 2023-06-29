@@ -1,6 +1,6 @@
 DWAPlannerROS:
 
-  controller_frequency: 30.0
+  controller_frequency: 15.0
 
   acc_lim_x: 20.0
   acc_lim_trans: 10.0
@@ -14,8 +14,8 @@ DWAPlannerROS:
 
   max_trans_vel: 3.0
   min_trans_vel: -1.5
-  max_rot_vel: 2.0
-  min_rot_vel: 0.1
+  max_vel_theta: 2.0
+  min_vel_theta: 0.1
 
   yaw_goal_tolerance: 0.1
   xy_goal_tolerance: 0.1
