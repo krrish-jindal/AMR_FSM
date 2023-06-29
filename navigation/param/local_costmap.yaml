@@ -4,57 +4,36 @@ local_costmap:
 
   update_frequency: 10.0
   publish_frequency: 10.0
-  transform_tolerance: 0.5
+  transform_tolerance: 0.5  
 
-  static_map: false
+  static_map: false  
   rolling_window: true
   width: 3
   height: 3
   resolution: 0.01
+  cost_scaling_factor: 3.0
   track_unknown_space: false
+  inflation_radius: 1.0
+  
 
   plugins:
-    - {name: obstacle_layer, type: "costmap_2d::ObstacleLayer"}
+    - {name: obstacle_layer, type: "costmap_2d::VoxelLayer"}
     - {name: inflation_layer, type: "costmap_2d::InflationLayer"}
-    - {name: obstacle_layer_3d, type: "costmap_2d::ObstacleLayer"}
-    - {name: inflation_layer_3d, type: "costmap_2d::InflationLayer"}
-
   obstacle_layer:
-    plugin: "costmap_2d::ObstacleLayer"
-    enabled: true
-    observation_sources: scan
-    scan:
-      sensor_frame: sensor_laser
-      data_type: LaserScan
-      topic: /scan_multi
-      marking: true
-      clearing: true
-      raytrace_range: 3
-      obstacle_range: 1.9
-      inf_is_valid: true
+    plugin: "nav2_costmap_2d::ObstacleLayer"
+    enabled: True
+    observation_sources: scan 
+    scan: {sensor_frame: sensor_laser, data_type: LaserScan, topic: /scan_multi, marking: true, clearing: True, raytrace_range : 2.0, obstacle_range: 1.9, inf_is_valid: True} 
+ 
+      
+      # obstacle_max_range: 4.0
+      # obstacle_min_range: 0.2
+    # pointcloud: {sensor_frame: sensor_laser, data_type: PointCloud2, topic: /output, marking: true, clearing: True, raytrace_range : 2.0, obstacle_range: 1.9, inf_is_valid: True} 
+ 
+      # topic: /output
+      # data_type: "PointCloud2"
+      # clearing: True
+      # marking: True
+      # inflation_radius: 0.09
 
-  inflation_layer:
-    enabled: true
-    inflation_radius: 0.8
-    cost_scaling_factor: 3.0
-
-  obstacle_layer_3d:
-    plugin: "costmap_2d::ObstacleLayer"
-    enabled: true
-    observation_sources: pointcloud
-    pointcloud:
-      sensor_frame: Link6
-      data_type: PointCloud2
-      topic: /output
-      marking: true
-      clearing: true
-      raytrace_range: 3
-      obstacle_range: 1.9
-      inf_is_valid: true
-
-  inflation_layer_3d:
-    enabled: true
-    inflation_radius: 0.6
-    cost_scaling_factor: 3.0
-
-always_send_full_costmap: true
+    always_send_full_costmap: True

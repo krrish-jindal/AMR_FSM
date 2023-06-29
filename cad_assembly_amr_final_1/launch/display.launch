@@ -48,12 +48,14 @@
   <node  name = "cloud_segment" pkg = "cloud_segment" type = "cloud_segment" output = "screen">
   </node>
   
-  <include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch" />
 
   <include file="$(find realsense2_camera)/launch/rs_d435_camera_with_model.launch" />
 <!--  -->
   <node  name = "pcl" pkg = "my_pcl_tutorial" type = "pcl" output = "screen">
   </node>
+  <include file="$(find pointcloud_to_laserscan)/launch/sample_node.launch" />
+  <include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch" />
+  
 	  <!-- <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" /> -->
 	  <!-- <node pkg="robot_pose_publisher" type="robot_pose_publisher" name="robot_pose_publisher" /> -->
 	  <!-- <node pkg="tf2_web_republisher" type="tf2_web_republisher" name="tf2_web_republisher"/> -->
