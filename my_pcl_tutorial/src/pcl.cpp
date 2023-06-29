@@ -12,7 +12,6 @@ void cloudCallback(const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   // Convert ROS PointCloud2 message to PCL point cloud
   pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
   pcl::fromROSMsg(*cloud_msg, *cloud);
-
   // Create a voxel grid filter
   pcl::VoxelGrid<pcl::PointXYZRGB> voxelGrid;
   voxelGrid.setInputCloud(cloud);

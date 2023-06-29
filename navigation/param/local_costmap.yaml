@@ -13,7 +13,7 @@ local_costmap:
   resolution: 0.01
   cost_scaling_factor: 3.0
   track_unknown_space: false
-  inflation_radius: 0.8
+  inflation_radius: 0.7
   
 
   plugins:
