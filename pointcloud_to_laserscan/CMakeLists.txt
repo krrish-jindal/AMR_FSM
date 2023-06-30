@@ -14,7 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES pointcloud_to_laserscan
+  LIBRARIES laserscan_to_pointcloud pointcloud_to_laserscan
   CATKIN_DEPENDS laser_geometry message_filters nodelet roscpp sensor_msgs tf2 tf2_ros tf2_sensor_msgs
 )
 
@@ -23,11 +23,11 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-# add_library(laserscan_to_pointcloud src/laserscan_to_pointcloud_nodelet.cpp)
-# target_link_libraries(laserscan_to_pointcloud ${catkin_LIBRARIES})
+add_library(laserscan_to_pointcloud src/laserscan_to_pointcloud_nodelet.cpp)
+target_link_libraries(laserscan_to_pointcloud ${catkin_LIBRARIES})
 
-# add_executable(laserscan_to_pointcloud_node src/laserscan_to_pointcloud_node.cpp)
-# target_link_libraries(laserscan_to_pointcloud_node laserscan_to_pointcloud ${catkin_LIBRARIES})
+add_executable(laserscan_to_pointcloud_node src/laserscan_to_pointcloud_node.cpp)
+target_link_libraries(laserscan_to_pointcloud_node laserscan_to_pointcloud ${catkin_LIBRARIES})
 
 add_library(pointcloud_to_laserscan src/pointcloud_to_laserscan_nodelet.cpp)
 target_link_libraries(pointcloud_to_laserscan ${catkin_LIBRARIES})
@@ -36,6 +36,8 @@ add_executable(pointcloud_to_laserscan_node src/pointcloud_to_laserscan_node.cpp
 target_link_libraries(pointcloud_to_laserscan_node pointcloud_to_laserscan ${catkin_LIBRARIES})
 
 install(TARGETS
+  laserscan_to_pointcloud
+  laserscan_to_pointcloud_node
   pointcloud_to_laserscan
   pointcloud_to_laserscan_node
 	RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

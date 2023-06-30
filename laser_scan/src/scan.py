@@ -1,50 +1,90 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
+import math
 import rospy
-from sensor_msgs.msg import LaserScan
+import tf2_ros
+from sensor_msgs.msg import PointCloud2, LaserScan
+from tf2_sensor_msgs.tf2_sensor_msgs import do_transform_cloud
+from tf2_ros import TransformListener, filter_failure_reasons
+from message_filters import Subscriber, TimeSynchronizer
 
-def callback(scan_data):
-    # Process the received laser scan data
-    rospy.loginfo("Received laser scan data with %d ranges", len(scan_data.ranges))
+class PointCloudToLaserScanNode:
+    def __init__(self):
+        self.target_frame = ""
+        self.tolerance = 0.01
+        self.min_height = -0.2
+        self.max_height = 0.15
+        self.angle_min = -math.pi
+        self.angle_max = math.pi
+        self.angle_increment = math.pi / 180.0
+        self.scan_time = 1.0 / 30.0
+        self.range_min = 0.0
+        self.range_max = float('inf')
+        self.inf_epsilon = 1.0
+        self.use_inf = True
 
-    # Create new laser scan messages for different angular ranges
-    scan_data_range1 = LaserScan()
-    scan_data_range1.header = scan_data.header
-    scan_data_range1.header.frame_id = "sensor_laser"
-    
-    scan_data_range1.angle_min = 0.0
-    scan_data_range1.angle_max = 1.0
-    scan_data_range1.ranges = scan_data.ranges[0:200]  # Example range subset
-    scan_data_range1.intensities = scan_data.intensities[200:300]  # Example intensity subset
+        self.tf_buffer = tf2_ros.Buffer()
+        self.tf_listener = tf2_ros.TransformListener(self.tf_buffer)
 
-    scan_data_range2 = LaserScan()
-    scan_data_range2.header = scan_data.header
-    scan_data_range2.header.frame_id = "sensor_laser"
+        self.sub = Subscriber("cloud_in", PointCloud2)
+        self.pub = rospy.Publisher("scan", LaserScan, queue_size=10)
 
-    scan_data_range2.angle_min = -3.14
-    scan_data_range2.angle_max = 3.14
-    scan_data_range2.ranges = scan_data.ranges[0:300]  # Example range subset
-    scan_data_range2.intensities = scan_data.intensities[200:300]  # Example intensity subset
+        self.sub.registerCallback(self.cloud_cb)
 
-    # Publish the laser scan data to multiple topics
-    publisher1.publish(scan_data_range1)
-    publisher2.publish(scan_data_range2)
+    def cloud_cb(self, cloud_msg):
+        output = LaserScan()
+        output.header = cloud_msg.header
+        if self.target_frame != "":
+            output.header.frame_id = self.target_frame
+
+        output.angle_min = self.angle_min
+        output.angle_max = self.angle_max
+        output.angle_increment = self.angle_increment
+        output.time_increment = 0.0
+        output.scan_time = self.scan_time
+        output.range_min = self.range_min
+        output.range_max = self.range_max
+
+        ranges_size = int(math.ceil((output.angle_max - output.angle_min) / output.angle_increment))
+
+        if self.use_inf:
+            output.ranges = [float('inf')] * ranges_size
+        else:
+            output.ranges = [output.range_max + self.inf_epsilon] * ranges_size
+
+        try:
+            if output.header.frame_id != cloud_msg.header.frame_id:
+                cloud_out = do_transform_cloud(cloud_msg, self.tf_buffer.lookup_transform(output.header.frame_id, cloud_msg.header.frame_id, cloud_msg.header.stamp, rospy.Duration(self.tolerance)))
+            else:
+                cloud_out = cloud_msg
+
+            for point in pc2.read_points(cloud_out, field_names=("x", "y", "z"), skip_nans=True):
+                if math.isnan(point[0]) or math.isnan(point[1]) or math.isnan(point[2]):
+                    continue
+
+                if point[1] > self.max_height or point[1] < self.min_height:
+                    continue
+
+                range_val = math.hypot(point[2], point[1])
+                if range_val < self.range_min:
+                    continue
+                if range_val > self.range_max:
+                    continue
+
+                angle = math.atan2(point[1], point[2])
+                if angle < output.angle_min or angle > output.angle_max:
+                    continue
+
+                index = int((angle - output.angle_min) / output.angle_increment)
+                if range_val < output.ranges[index]:
+                    output.ranges[index] = range_val
+
+            self.pub.publish(output)
+
+        except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException):
+            rospy.logwarn("Transform exception occurred")
 
 if __name__ == '__main__':
-    # Initialize the ROS node
-    rospy.init_node('scan_topic_subscriber_publisher', anonymous=True)
-
-    # Define the topic to subscribe and publish to
-    subscribe_topic = '/scan'
-    publish_topic1 = '/scan_range1'
-    publish_topic2 = '/scan_range2'
-
-    # Create the subscriber object
-    subscriber = rospy.Subscriber(subscribe_topic, LaserScan, callback)
-
-    # Create the publisher objects
-    publisher1 = rospy.Publisher(publish_topic1, LaserScan, queue_size=100)
-    publisher2 = rospy.Publisher(publish_topic2, LaserScan, queue_size=100)
-
-    # Spin and wait for incoming messages
+    rospy.init_node('pointcloud_to_laserscan')
+    node = PointCloudToLaserScanNode()
     rospy.spin()

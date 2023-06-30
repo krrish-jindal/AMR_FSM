@@ -32,7 +32,7 @@ void cloudCallback(const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   pcl::PassThrough<pcl::PointXYZRGB> passY;
   passY.setInputCloud(cloud);
   passY.setFilterFieldName("y");
-  passY.setFilterLimits(-0.3, 0.1);  // FRONT Z AXIS Specify the range along the Y-axis to keep points
+  passY.setFilterLimits(-0.1, 0.15);  // FRONT Z AXIS Specify the range along the Y-axis to keep points
   passY.filter(*cloud);
 
   // Convert filtered point cloud back to ROS message

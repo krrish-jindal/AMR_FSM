@@ -2,8 +2,8 @@
 
 <launch>
   <machine name="fsm" address="10.194.173.205" password="123456" env-loader="/home/fsm/krrish/devel/env.sh" user="fsm"/>
-  <!-- <node pkg="tf" type="static_transform_publisher" name="odom_to_map" -->
-  <!-- args="0 0 0 0 0 0  /map /odom 100" />  -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="map" -->
+  <!-- args="0 0 0  /map /base_link 100" />  -->
 
 <!--         URDF launch        -->
   <arg

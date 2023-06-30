@@ -2,6 +2,7 @@
 
 <launch>
 
+    <arg name="camera" default="camera" />
 
     <!-- start sensor-->
     <!-- <include file="$(find openni2_launch)/launch/openni2.launch"> -->
@@ -14,7 +15,7 @@
         <remap from="cloud_in" to="/output"/>
         <remap from="scan" to="/scan_1"/>
         <rosparam>
-            target_frame: camera_link # Leave disabled to output scan in pointcloud frame
+            target_frame: Link6 # Leave disabled to output scan in pointcloud frame
             transform_tolerance: 0.01
             min_height: 0.0
             max_height: 1.0
