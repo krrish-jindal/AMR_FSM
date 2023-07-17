@@ -13,16 +13,17 @@ void cloudCallback(const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
   // Convert ROS PointCloud2 message to PCL point cloud
   pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
   pcl::fromROSMsg(*cloud_msg, *cloud);
+  pcl::VoxelGrid<pcl::PointXYZRGB> voxelGrid;
+  voxelGrid.setInputCloud(cloud);
+  voxelGrid.setLeafSize(0.08, 0.08, 0.08);  // Specify the size of the voxels
   for (size_t i = 0; i < cloud->points.size(); ++i) {
     cloud->points[i].x *= scale_factor;
     cloud->points[i].y *= scale_factor;
     cloud->points[i].z *= scale_factor;
   }
   // Create a voxel grid filter
-  pcl::VoxelGrid<pcl::PointXYZRGB> voxelGrid;
-  voxelGrid.setInputCloud(cloud);
-  voxelGrid.setLeafSize(0.02, 0.02, 0.02);  // Specify the size of the voxels
   voxelGrid.filter(*cloud);
+
 
 
 //   SET POINT CLOUD VISIBLE FRAME 

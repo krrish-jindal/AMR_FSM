@@ -8,7 +8,7 @@
 	<param name="laserscan_topics" value ="/out1 /out2 /out3 /out4 /out5 /out6 " /> <!-- LIST OF THE LASER SCAN TOPICS TO SUBSCRIBE -->
 	<param name="angle_min" value="-3.14"/>
 	<param name="angle_max" value="3.14"/>
-	<param name="angle_increment" value="0.0008"/>
+	<param name="angle_increment" value="0.015"/>
 	<param name="scan_time" value="0.0333333"/>
 	<param name="range_min" value="0.0"/>
 	<param name="range_max" value="50.0"/>
