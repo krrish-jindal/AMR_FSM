@@ -1,3 +1,5 @@
+//     FOR LASER SEGMENTATION
+
 #include <ros/ros.h>
 #include <sensor_msgs/LaserScan.h>
 ros::Publisher publish1;
@@ -142,7 +144,7 @@ void scanCallback6(const sensor_msgs::LaserScan::ConstPtr& scan_msg)
 
 int main(int argc, char** argv)
 {
-  ros::init(argc, argv, "pcl_node");
+  ros::init(argc, argv, "laser_segment");
   ros::NodeHandle nh;
 
   // Create publishers to publish the filtered point clouds

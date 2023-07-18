@@ -5,7 +5,7 @@
   <!-- <node pkg="tf" type="static_transform_publisher" name="odom_to_map"
   args="0 0 0 0 0 0  /map /odom 100" /> -->
   <arg name="map_file" default="$(find navigation)/maps/updated_map.yaml"/>  
-  <arg name="move_forward_only" default="false"/>
+  <arg name="move_forward_only" default="true"/>
 
   <!-- Map server -->
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
@@ -18,14 +18,4 @@
     <arg name="move_forward_only" value="$(arg move_forward_only)"/>
   </include>
 
- <!-- <include file="$(find cad_assembly_amr_final_1)/launch/display.launch" /> -->
-  <!-- rviz -->
-  <!-- <node  -->
-    <!-- pkg="rviz"  -->
-    <!-- type="rviz"  -->
-    <!-- name="rviz"  -->
-    <!-- args="-d $(find navigation)/rviz/navigation.rviz" -->
-    <!-- required="true"     -->
-    <!--  -->
-    <!-- />   -->
 </launch>
