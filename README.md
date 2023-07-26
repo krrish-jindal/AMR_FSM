@@ -19,15 +19,7 @@
 
 -->
 
-[![Contributors][contributors-shield]][contributors-url]
-
-[![Forks][forks-shield]][forks-url]
-
-[![Stargazers][stars-shield]][stars-url]
-
-[![Issues][issues-shield]][issues-url]
-
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Contributors][contributors-shield]][contributors-url]  [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![LinkedIn][linkedin-shield]][linkedin-url]
 
   
 <!-- PROJECT LOGO -->
@@ -38,7 +30,7 @@
 
 <a  href="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg.png?raw=true">
 
-<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg.png?raw=true"  alt="Logo"  width="240"  height="120">
+<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg.png?raw=true"  alt="Logo"  width="200"  height="100">
 </a>
 
   
@@ -56,7 +48,8 @@ This is the repo for the <a  href="https://github.com/krrish-jindal/AMR_FSM">AMR
 
 <a  href="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR_obs_n_pcl.gif"><strong>Demo video »</strong></a>
 
-<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR_obs_n_pcl.gif?raw=true"  alt="Logo"  width="740"  height="320">
+<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR_obs_n_pcl.gif?raw=true"  alt="Logo"  width="640"  height="320">
+
 
 <br  />
 
@@ -99,14 +92,14 @@ This is the repo for the <a  href="https://github.com/krrish-jindal/AMR_FSM">AMR
 
   
 
-<img  src = "https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/FSM_AMR_DFD_No_Bg_Th-2.png?raw=true"  >
+<img  src = "https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/FSM_AMR_DFD_No_Bg_Th-2.png?raw=true"  alt="Logo"  width="700"  height="500">
   
 
 # Circuit Diagram
 
   
 
-<img  src = "https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/circuit_dig.jpg?raw=true"  >
+<img  src = "https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/circuit_dig.jpg?raw=true"  alt="Logo"  width="700"  height="600"  >
  
 
 <p  align="right">(<a  href="#readme-top">back to top</a>)</p>
@@ -133,11 +126,8 @@ This is the repo for the <a  href="https://github.com/krrish-jindal/AMR_FSM">AMR
 
 * [Ubuntu Installation guide](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
 
-* [Raspberrypi Documentation](https://www.raspberrypi.com/documentation/)
 
-* [Esp32 Documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)
 
-* [Blender Documentaion](https://docs.blender.org/)
 
   
 
