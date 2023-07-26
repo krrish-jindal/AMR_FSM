@@ -1,8 +1,3 @@
-
-
-
-
- 
 <!-- PROJECT SHIELDS -->
 
 <!--
@@ -35,7 +30,7 @@
 
   
 
-<h3  align="center">AMR_FSM</h3>
+<h2  align="center">AMR_FSM</h2>
 
   
 
@@ -46,7 +41,7 @@ This is the repo for the <a  href="https://github.com/krrish-jindal/AMR_FSM">AMR
 
 <br  />
 
-<a  href="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR_obs_n_pcl.gif"><strong>Demo video »</strong></a>
+<a  href="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets"><strong>Demo video »</strong></a>
 
 <img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR_obs_n_pcl.gif?raw=true"  alt="Logo"  width="640"  height="320">
 
@@ -64,7 +59,7 @@ This is the repo for the <a  href="https://github.com/krrish-jindal/AMR_FSM">AMR
 <p  align="right">(<a  href="#readme-top">back to top</a>)</p>
 
   
-### Built With
+## Built With
 
   
 
@@ -88,11 +83,84 @@ This is the repo for the <a  href="https://github.com/krrish-jindal/AMR_FSM">AMR
 
   
 
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* Ros
+  - Refer to our [Ros installation guide](https://atom-robotics-lab.github.io/wiki/markdown/ros/installation.html)
+  - Installing Navigation specific dependencies: map-server, move_base and amcl
+    ```sh
+    sudo apt install ros-noetic-navigation
+    ```
+* Serial Setup
+	* For serial setup to run motor driver using USB refer to this:
+	```sh
+	https://github.com/wjwwood/serial.git
+	```
+
+### Installation
+
+1. Clone the repo inside your `Ros Workspace`
+   ```sh
+   git clone git@github.com:krrish-jindal/AMR_FSM.git
+   ```
+2. Build the package
+   ```sh
+   cd ~/catkin_ws
+   catkin_make
+   ```
+3. Launch the packages file by
+   ```sh
+   roslaunch <package_name> <launch_file>
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+
+- The `cad_assembly_amr_final_1` dir contains all the bot model description files and main launch file.
+- The `navigation` dir contains all the config files for enabling navigation and planning.
+
+In order to run the simulation you are required to do the following:</br>
+
+* For running the `All Necessary Nodes `
+    ```sh
+    roslaunch cad_assembly_amr_final_1 display.launch
+    ```
+
+ - For launch the `navigation file.`
+    ```sh
+    roslaunch navigation navigation.launch
+    ```
+    **_NOTE:_** Make sure that you have installed the navigation dependencies before running the navigation launch file.<br />
+
+  - Setting the goal
+    In the Rviz add a 2d on the map.<br /> <br />
+
+  Voila! The bot will start moving towards the goal now.<br /><br />
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
 # DFD
 
   
 
-<img  src = "https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/FSM_AMR_DFD_No_Bg_Th-2.png?raw=true"  alt="Logo"  width="700"  height="500">
+<img  src = "https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/FSM_AMR_DFD_Th-2.png?raw=true"  alt="Logo"  width="700"  height="500">
   
 
 # Circuit Diagram
