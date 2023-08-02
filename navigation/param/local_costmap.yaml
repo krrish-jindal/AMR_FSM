@@ -11,7 +11,7 @@ local_costmap:
   width: 4
   height: 4
   resolution: 0.01
-  cost_scaling_factor: 3.0
+  cost_scaling_factor: 2.6
   track_unknown_space: false
   inflation_radius: 1.0
   
@@ -23,18 +23,14 @@ local_costmap:
     plugin: "nav2_costmap_2d::ObstacleLayer"
     enabled: True
     observation_sources: scan scan_1
-    scan: {sensor_frame: sensor_laser, data_type: LaserScan, topic: /scan_multi, marking: true, clearing: True, raytrace_range : 2.0, obstacle_range: 1.9, inf_is_valid: True} 
-    scan_1: {sensor_frame: depth_camera, data_type: LaserScan, topic: camera/scan, marking: true, clearing: True, raytrace_range : 2.0, obstacle_range: 1.9, inf_is_valid: false} 
- 
-      
-      # obstacle_max_range: 4.0
-      # obstacle_min_range: 0.2
-    # pointcloud: {sensor_frame: sensor_laser, data_type: PointCloud2, topic: /output, marking: true, clearing: True, raytrace_range : 2.0, obstacle_range: 1.9, inf_is_valid: True} 
- 
-      # topic: /output
-      # data_type: "PointCloud2"
-      # clearing: True
-      # marking: True
-      # inflation_radius: 0.09
+
+    #    OLD PARAMS
+    # scan: {sensor_frame: sensor_laser, data_type: LaserScan, topic: /scan_multi, marking: true, clearing: True, raytrace_range : 2.0, obstacle_range: 1.9, inf_is_valid: True} 
+    # scan_1: {sensor_frame: depth_camera, data_type: LaserScan, topic: camera/scan, marking: true, clearing: True, raytrace_range : 2.0, obstacle_range: 1.9, inf_is_valid: false} 
+    
+    #     NEW PARAMS
+    scan: {sensor_frame: sensor_laser, data_type: LaserScan, topic: /scan_multi, marking: true, clearing: True, raytrace_range : 1.6, obstacle_range: 1.5, inf_is_valid: True} 
+    scan_1: {sensor_frame: depth_camera, data_type: LaserScan, topic: camera/scan, marking: true, clearing: True, raytrace_range : 1.1, obstacle_range: 1, inf_is_valid: false} 
+
 
     always_send_full_costmap: True

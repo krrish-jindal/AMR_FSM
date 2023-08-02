@@ -6,7 +6,7 @@ global_costmap:
   update_frequency: 10
   publish_frequency: 10
   transform_tolerance: 0.15
-  inflation_radius: 0.9
+  inflation_radius: 1
   cost_scaling_factor: 3.0
   marking: true
   clearing: true

@@ -5,7 +5,7 @@
   <!-- <node pkg="tf" type="static_transform_publisher" name="odom_to_map"
   args="0 0 0 0 0 0  /map /odom 100" /> -->
   <arg name="map_file" default="$(find navigation)/maps/updated_map.yaml"/>  
-  <arg name="move_forward_only" default="true"/>
+  <arg name="move_forward_only" default="false"/>
 
   <!-- Map server -->
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
