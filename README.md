@@ -61,13 +61,17 @@ This is the repo for the <a  href="https://github.com/krrish-jindal/AMR_FSM">AMR
 ## Exploded View
 
    This is visual representation of how the components of an assembly or design are positioned and arranged relative to each other in URDF.
-
-
+<p  align="center">
 <img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/explode_2.gif?raw=true"  alt="Logo"  width="640"  height="400">
+
+</p>
 
 
 <br  />
 
+<p  align="right">(<a  href="#readme-top">back to top</a>)</p>
+
+<br  />
 
 ## Built With
 
