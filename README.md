@@ -25,7 +25,7 @@
 
 <a  href="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg.png?raw=true">
 
-<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg.png?raw=true"  alt="Logo"  width="200"  height="100">
+<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg_2.png?raw=false"  alt="Logo"  width="400"  height="200">
 </a>
 
   
