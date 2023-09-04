@@ -23,9 +23,9 @@
 
 <div  align="center">
 
-<a  href="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg.png?raw=true">
+<a  href="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg_2.png?raw=true">
 
-<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg_2.png?raw=false"  alt="Logo"  width="400"  height="200">
+<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg_2.png?raw=false"  alt="Logo"  width="430"  height="220">
 </a>
 
   
@@ -58,7 +58,17 @@ This is the repo for the <a  href="https://github.com/krrish-jindal/AMR_FSM">AMR
 
 <p  align="right">(<a  href="#readme-top">back to top</a>)</p>
 
-  
+## Exploded View
+
+   This is visual representation of how the components of an assembly or design are positioned and arranged relative to each other in URDF.
+
+
+<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/explode.gif?raw=true"  alt="Logo"  width="550"  height="320">
+
+
+<br  />
+
+
 ## Built With
 
   
