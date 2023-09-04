@@ -61,6 +61,7 @@ This is the repo for the <a  href="https://github.com/krrish-jindal/AMR_FSM">AMR
 ## Exploded View
 
    This is visual representation of how the components of an assembly or design are positioned and arranged relative to each other in URDF.
+
 <p  align="center">
 <img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/explode_2.gif?raw=true"  alt="Logo"  width="640"  height="400">
 
@@ -173,15 +174,19 @@ In order to run the simulation you are required to do the following:</br>
 # DFD
 
   
+<p  align="center">
 
 <img  src = "https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/FSM_AMR_DFD_Th-2.png?raw=true"  alt="Logo"  width="700"  height="500">
-  
+</p>  
 
 # Circuit Diagram
 
   
+<p  align="center">
 
 <img  src = "https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/circuit_dig.jpg?raw=true"  alt="Logo"  width="700"  height="600"  >
+
+</p>  
  
 
 <p  align="right">(<a  href="#readme-top">back to top</a>)</p>
