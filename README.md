@@ -63,7 +63,7 @@ This is the repo for the <a  href="https://github.com/krrish-jindal/AMR_FSM">AMR
    This is visual representation of how the components of an assembly or design are positioned and arranged relative to each other in URDF.
 
 
-<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/explode.gif?raw=true"  alt="Logo"  width="550"  height="320">
+<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/explode_2.gif?raw=true"  alt="Logo"  width="640"  height="400">
 
 
 <br  />
