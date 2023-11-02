@@ -43,10 +43,8 @@ This is the repo for the <a  href="https://github.com/krrish-jindal/AMR_FSM">AMR
 
 <a  href="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets"><strong>Demo video »</strong></a>
 
-<!-- <img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR_obs_n_pcl.gif?raw=true"  alt="Logo"  width="640"  height="320"> -->
+<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR_obs.gif?raw=true"  alt="Logo"  width="640"  height="320">
 
-<video controls src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR_obs.mp4" width="620" height="400">
-</video>   
 
 <br  />
 
