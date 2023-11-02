@@ -23,9 +23,9 @@
 
 <div  align="center">
 
-<a  href="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg_2.png?raw=true">
+<a  href="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg_2.webp?raw=true">
 
-<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg_2.png?raw=false"  alt="Logo"  width="430"  height="220">
+<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR-No_bg_2.webp?raw=false"  alt="Logo"  width="430"  height="220">
 </a>
 
   
@@ -43,8 +43,10 @@ This is the repo for the <a  href="https://github.com/krrish-jindal/AMR_FSM">AMR
 
 <a  href="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets"><strong>Demo video »</strong></a>
 
-<img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR_obs_n_pcl.gif?raw=true"  alt="Logo"  width="640"  height="320">
+<!-- <img  src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR_obs_n_pcl.gif?raw=true"  alt="Logo"  width="640"  height="320"> -->
 
+<video controls src="https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/AMR_obs.mp4" width="620" height="400">
+</video>   
 
 <br  />
 
@@ -176,7 +178,7 @@ In order to run the simulation you are required to do the following:</br>
   
 <p  align="center">
 
-<img  src = "https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/FSM_AMR_DFD_Th-2.png?raw=true"  alt="Logo"  width="700"  height="500">
+<img  src = "https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/FSM_AMR_DFD_Th-2.webp?raw=true"  alt="Logo"  width="700"  height="500">
 </p>  
 
 # Circuit Diagram
@@ -184,7 +186,7 @@ In order to run the simulation you are required to do the following:</br>
   
 <p  align="center">
 
-<img  src = "https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/circuit_dig.jpg?raw=true"  alt="Logo"  width="700"  height="600"  >
+<img  src = "https://github.com/krrish-jindal/AMR_FSM/blob/main/assets/circuit_dig.webp?raw=true"  alt="Logo"  width="700"  height="600"  >
 
 </p>  
  
